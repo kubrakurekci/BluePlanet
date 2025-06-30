@@ -2,8 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+}
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
+.content {
+  position: relative;
+  z-index: 1;
+}
 #logo {
     width: 70px;
     position: relative;
@@ -128,7 +142,6 @@ position: relative;
   }
 }
 
-/* Çocuklara özel */
 .child-special {
   background: linear-gradient(45deg, #78BBFF, #D11FF5, #FF78FD, #FFFB00);
   background-size: 300% 300%;
@@ -165,7 +178,12 @@ position: relative;
 .roboto-condensed-48px {
       font-family: 'Roboto Condensed', sans-serif;
       font-weight: 400;
-      font-size: 56px;
+      font-size: 48px;
+    }
+    .roboto-condensed-24px {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
     }
     .roboto-condensed-16px {
       font-family: 'Roboto Condensed', sans-serif;
@@ -177,6 +195,11 @@ position: relative;
       font-weight: 400;
       font-size: 8px;
     }
+    .roboto-condensed-btn{
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: 300px;
+      font-size: 8px;
+    }
 
     .container-fluid.position-relative {
       position: relative;
@@ -185,6 +208,11 @@ position: relative;
       border: 1px solid #ccc;
       padding: 20px;
       background: #f0f0f0;
+    }
+    .empty-div {
+      width: 100%;
+      height: 100vh;
+      margin-bottom: 20px;
     }
     .gundem-scroll {
   display: flex;
@@ -202,8 +230,9 @@ position: relative;
   color: white;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible;
   cursor: pointer;
+  
 }
 
 .gundem-card-title {
@@ -239,6 +268,17 @@ position: relative;
   margin: 0;
   font-size: 14px;
 }
+    #gundem > .container-fluid {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 0%;        
+        margin:0;
+        position: relative;
+        border: none;
+        overflow: hidden;
+
+    }
+
 
     .scroll-next, .scroll-previous {
       position: absolute;
@@ -271,16 +311,6 @@ position: relative;
       font-size: 1.5rem;
       color: #332D56;
     }
-    #gundem > .container-fluid {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 16px;        
-        margin-top: 20px;
-        position: relative;
-        border: none;
-        overflow: hidden;
-
-    }
 
 .btn{
   display: inline-block;
@@ -303,4 +333,84 @@ position: relative;
   display: flex;
   justify-content: flex-end;
   margin-top: 20px;
+}
+#featured {
+  background-color:#332D56
+}
+.card-bg {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.card-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
+}
+.save-water::before {
+  background-image: url(/BluePlanet/assets/dishes-to-the-machine.png);
+}
+.save-energy::before {
+  background-image: url(/BluePlanet/assets/lightbulbs.png);
+}
+.save-bath-water::before {
+  background-image: url(/BluePlanet/assets/taking-a-bath.png);
+}
+.unplug-devices::before {
+  background-image: url(/BluePlanet/assets/electronic-devices.png);
+}
+.wash-at-30::before {
+  background-image: url(/BluePlanet/assets/washing-machine.png);
+}
+.no-meat-day::before {
+  background-image: url(/BluePlanet/assets/vegeterian.png);
+}
+.features {
+  padding: 16px;
+  margin: 8px;
+  border-radius: 4px 24px 4px 24px;
+  color: #fff;
+  box-shadow: 0 0 8px 2px rgba(124, 141, 140, 0.7);
+  display: flex;
+  flex-direction: column;
+ height: 300px !important;
+}
+.bi-droplet-fill{
+  color: aqua;
+}
+.bi-lightbulb-fill {
+  color: yellow;
+}
+.fa-bath {
+  color: #9900f1;
+  font-size: 1.8rem;
+margin: 8px;
+}
+.fa-plug{
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 8px;
+}
+.bi-thermometer-low {
+  color: orange;
+  font-size: 1.8rem;
+}
+.bi-fork-knife {
+  color:cadetblue;
+  font-size: 1.8rem;
+}
+.growingIcon {
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+.btn-sm{
+  display: flex;
+  width: 250px;
+  justify-content: center;
+  
 }

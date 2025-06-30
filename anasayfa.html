@@ -20,14 +20,15 @@
 </head>
 
 <body>
+  <video autoplay muted loop playsinline id="bg-video" src="/BluePlanet/assets/37088-413229662_tiny.mp4"></video>
 
   <!--Header Section-->
-  <section class="header ">
+  <section class="header content ">
     <div class="container-fluid header fixed-top">
       <nav class="navbar navbar-expand-lg ">
-        <!-- Logo -->
         <a class="navbar-brand position-relative mx-4" href="/">
-          <img id="logo" src="/BluePlanet/assets/1de5ef5d-4b02-4691-8522-c1326e551749_removalai_preview.png" alt="Logo" />
+          <img id="logo" src="/BluePlanet/assets/1de5ef5d-4b02-4691-8522-c1326e551749_removalai_preview.png"
+            alt="Logo" />
           <span span class="text-light logo-back-text playwrite-de-grund">BluePlanet</span>
         </a>
 
@@ -40,7 +41,6 @@
 
         <!-- Navbar Content -->
         <div class="collapse navbar-collapse justify-content-between align-items-center" id="mainNavbar">
-          <!-- Menu -->
           <ul class="navbar-nav mx-auto mb-0 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link px-2 m-1 roboto-condensed" href="#gundem">Gündem</a>
@@ -72,15 +72,12 @@
     </div>
   </section>
 
-  <div class="nature-video">
-    <video autoplay muted loop>
-      <source src="/BluePlanet/assets/37088-413229662_tiny.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+  <div class="empty-div">
+
   </div>
 
   <!--Gündem-->
-  <section id="gundem">
+  <section id="gundem" class="content">
     <div class="container-fluid position-relative">
       <div class="gundem-scroll">
         <div class="gundem-card" href="#">
@@ -137,91 +134,109 @@
         <i class="bi bi-chevron-right"></i>
       </button>
       <div class="btn-container">
-        <button class="btn roboto-condensed-8px">Tüm Haberleri İncele</button>
+        <button class="btn roboto-condensed-btn">Tüm Haberleri İncele</button>
       </div>
     </div>
   </section>
 
   <!--Çözüm Önerileri-->
-  <div class="container px-4 py-5" id="icon-grid">
-    <h2 class="pb-2 border-bottom">Icon grid</h2>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-leaf m-2"></i>
-        </svg>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 roboto-condensed-16px">Featured title</h3>
-          <p class="roboto-condensed-16px">Paragraph of text beneath the heading to explain the heading.</p>
+  <div class="container-fluid px-4 py-5 content " id="featured">
+    <h2 class="pb-2 border-bottom playwrite-de-grund text-light ">Çözüm Önerileri</h2>
+    <div class="row g-4 py-5 my-2 row-cols-1 row-cols-lg-3">
+      <div class="col  ">
+        <div class="features d-flex flex-column card-bg save-water">
+          <div
+            class="feature-icon growingItem d-inline-flex align-items-center justify-content-center fs-2 mb-3 growingIcon ">
+            <i class="bi bi-droplet-fill"></i>
+          </div>
+          <h3 class="roboto-condensed-24px">Bulaşıkları sudan geçirmeden makineye koymak</h3>
+          <p class="roboto-condensed-16px">Bu alışkanlık yılda ortalama %30 su tasarrufu sağlar. Ortalama bir evde yılda
+            15.000 litreye kadar su israfının önüne geçilir.</p>
         </div>
       </div>
-      <div class="col d-flex align-items-start">
-        <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true">
-          <use xlink:href="#cpu-fill"></use>
-        </svg>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 roboto-condensed-16px">Featured title</h3>
-          <p class="roboto-condensed-16px">Paragraph of text beneath the heading to explain the heading.</p>
+      <div class="col">
+        <div class="features d-flex flex-column card-bg save-energy">
+          <div
+            class="feature-icon growingItem d-inline-flex align-items-center justify-content-center fs-2 mb-3 growingIcon">
+            <i class="bi bi-lightbulb-fill"></i>
+          </div>
+          <h3 class="roboto-condensed-24px">Ampulleri LED ile değiştirmek</h3>
+          <p class="roboto-condensed-16px">LED ampuller, akkor ampullere göre %80 daha az enerji tüketir. Yılda ortalama
+            75 kg karbon salımını azaltabilir.</p>
         </div>
       </div>
-      <div class="col d-flex align-items-start">
-        <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true">
-          <use xlink:href="#calendar3"></use>
-        </svg>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 roboto-condensed-16px">Featured title</h3>
-          <p class="roboto-condensed-16px">Paragraph of text beneath the heading to explain the heading.</p>
+      <div class="col">
+        <div class="features d-flex flex-column card-bg save-bath-water">
+          <div
+            class="feature-icon growingItem d-inline-flex align-items-center justify-content-center fs-2 mb-3 growingIcon">
+            <i class="fa-solid fa-bath"></i>
+          </div>
+          <h3 class="roboto-condensed-24px">5 dakikalık duş süresi</h3>
+          <p class="roboto-condensed-16px">Her duş süresini 10 dakikadan 5 dakikaya indirmek, yılda yaklaşık 18.000
+            litre su tasarrufu sağlar. Bu da bir insanın yaklaşık 180 duşluk su ihtiyacına denk!</p>
         </div>
       </div>
-      <div class="col d-flex align-items-start">
-        <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true">
-          <use xlink:href="#home"></use>
-        </svg>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 roboto-condensed-16px">Featured title</h3>
-          <p class="roboto-condensed-16px">Paragraph of text beneath the heading to explain the heading.</p>
+      <div class="col">
+        <div class="features d-flex flex-column card-bg unplug-devices">
+          <div
+            class="feature-icon growingItem d-inline-flex align-items-center justify-content-center fs-2 mb-3 growingIcon">
+            <i class="fa-solid fa-plug"></i>
+          </div>
+          <h3 class="roboto-condensed-24px">Kullanılmayan elektronik aletleri prizden çekmek</h3>
+          <p class="roboto-condensed-16px">“Vampir enerji” olarak bilinen bu gizli tüketim, yıllık elektrik faturasının
+            %10'una kadarına denk gelebilir. Ayrıca karbon salımını da yılda ortalama 100 kg azaltır.</p>
         </div>
       </div>
-      <div class="col d-flex align-items-start">
-        <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true">
-          <use xlink:href="#speedometer2"></use>
-        </svg>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 roboto-condensed-16px">Featured title</h3>
-          <p class="roboto-condensed-16px">Paragraph of text beneath the heading to explain the heading.</p>
+      <div class="col">
+        <div class="features d-flex flex-column card-bg wash-at-30">
+          <div
+            class="feature-icon growingItem d-inline-flex align-items-center justify-content-center fs-2 mb-3 growingIcon">
+            <i class="bi bi-thermometer-low"></i>
+          </div>
+          <h3 class="roboto-condensed-24px">30°C'de çamaşır yıkamak</h3>
+          <p class="roboto-condensed-16px">60°C yerine 30°C’de yıkama,makinenin enerji tüketimini yarıya indirir. Bu da
+            yılda saatlerce ışık açık bırakmaya eşdeğer enerji tasarrufu demek.</p>
         </div>
       </div>
-      <div class="col d-flex align-items-start">
-        <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true">
-          <use xlink:href="#toggles2"></use>
-        </svg>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 roboto-condensed-16px">Featured title</h3>
-          <p class="roboto-condensed-16px">Paragraph of text beneath the heading to explain the heading.</p>
+      <div class="col">
+        <div class="features d-flex flex-column card-bg no-meat-day">
+          <div
+            class="feature-icon growingItem d-inline-flex align-items-center justify-content-center fs-2 mb-3 growingIcon">
+            <i class="bi bi-fork-knife"></i>
+          </div>
+          <h3 class="roboto-condensed-24px">Haftada 1 gün et tüketmemek</h3>
+          <p class="roboto-condensed-16px">Hayvansal üretim, su ve karbon açısından çok maliyetlidir. Haftada 1 gün et
+            yememek, yılda yaklaşık 100 kg karbon emisyonunu azaltabilir. Bu, bir arabanın 400 km yol yapmasına
+            denkgelen bir etki sağlar.</p>
         </div>
       </div>
-      <div class="col d-flex align-items-start">
-        <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true">
-          <use xlink:href="#geo-fill"></use>
-        </svg>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 roboto-condensed-16px">Featured title</h3>
-          <p class="roboto-condensed-16px">Paragraph of text beneath the heading to explain the heading.</p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true">
-          <use xlink:href="#tools"></use>
-        </svg>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 roboto-condensed-16px">Featured title</h3>
-          <p class="roboto-condensed-16px">Paragraph of text beneath the heading to explain the heading.</p>
-        </div>
+    </div>
+  </div>
+  <!--Karbon Ayak İzi Testi-->
+  <div class="carbon-foot-step content">
+    <div class="px-4 py-5 my-5 text-center"> 
+      <h2 class="display-5 pb-4 fw-bold text-light playwrite-de-grund">Hepimiz yaşarken biraz iz bırakıyoruz.</h2>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4 text-light fw-light roboto-condensed-16px"> Peki, senin karbon ayak izin ne kadar büyük? Karbon ayak izini ölç, çevreye etkini keşfet! Basit sorularla hayatındaki karbon salımını öğren, sürdürülebilir adımlar atmaya başla.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> <button type="button"
+            class="btn btn-sm">Teste Başla <!DOCTYPE html>
+            <html lang="en">
+            <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Document</title>
+            </head>
+            <body>
+              
+            </body>
+            </html></button> 
+          </div>
       </div>
     </div>
   </div>
 
 
-
+  <script src="https://kit.fontawesome.com/d1da082d12.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
