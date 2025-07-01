@@ -20,3 +20,16 @@ document.addEventListener("DOMContentLoaded", function() {
       icon.style.transform = `scale(${scale})`;
     });
   });
+// Animasyonu başlatan fonksiyon
+function animateCircleFill() {
+  const circleFill = document.querySelector('.first-crousel .circle-fill');
+  if (!circleFill) return;
+
+  // stroke-dashoffset sıfıra düşerse dolu görünür
+  circleFill.style.strokeDashoffset = '0';
+}
+
+// Sayfa yüklendiğinde veya istersen carousel slide değiştiğinde çağırabilirsin
+document.addEventListener('DOMContentLoaded', () => {
+  animateCircleFill();
+});

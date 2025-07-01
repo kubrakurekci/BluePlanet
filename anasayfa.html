@@ -19,61 +19,67 @@
 
 </head>
 
+
 <body>
   <video autoplay muted loop playsinline id="bg-video" src="/BluePlanet/assets/37088-413229662_small.mp4"></video>
 
-  <!--Header Section-->
-  <section class="header content ">
-    <div class="container-fluid header fixed-top">
-      <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand position-relative mx-4" href="/">
-          <img id="logo" src="/BluePlanet/assets/91852944-e061-4982-9507-3e5a7b1bc1f3_removalai_preview.png"
-            alt="Logo" />
-          <span span class="text-light logo-back-text playwrite-de-grund">BluePlanet</span>
-        </a>
-
-
-        <!-- Hamburger Menu Button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-          aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar Content -->
-        <div class="collapse navbar-collapse justify-content-between align-items-center" id="mainNavbar">
-          <ul class="navbar-nav mx-auto mb-0 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link px-2 m-1 roboto-condensed" href="#gundem">Gündem</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-2 m-1 roboto-condensed" href="#">Çözüm Önerileri</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-2 m-1 roboto-condensed" href="#">İz Testi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-2 m-1 roboto-condensed" href="#">Veriler</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link child-special px-2 m-1 roboto-condensed" href="#">Çocuklara Özel</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-2 m-1 roboto-condensed" href="#">Biz Kimiz?</a>
-            </li>
-          </ul>
-
-          <!-- Contact Image Efect -->
-          <div class="d-flex ms-auto p-1 me-3 contact-icon align-items-center justify-content-center">
+  <nav class="navbar fixed-top navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand position-relative mx-5" href="#">
+        <img id="logo" src="/BluePlanet/assets/logo.png" alt="Logo" />
+        <span span class="text-light logo-back-text playwrite-de-grund">BluePlanet</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#gundem">Gündem</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cozumler">Çözüm Önerileri</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="izTestDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              İz Testi
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="izTestDropdown">
+              <li><a class="dropdown-item nav-link" href="#test1">Karbon Ayak İzi Testi</a></li>
+              <li><a class="dropdown-item nav-link" href="#test2">Su İzi Testi</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#veriler">Veriler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link child-special" href="#">Çocuklara Özel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Biz Kimiz?</a>
+          </li>
+          <div class="d-flex ms-auto p-1 m-0 contact-icon align-items-center justify-content-center">
             <div class="pulse-ring"></div>
             <div class="pulse-ring delay"></div>
             <img src="/BluePlanet/assets/contact_support_52dp_FFF_FILL0_wght400_GRAD0_opsz48.png" alt="Destek">
           </div>
-      </nav>
+        </ul>
+      </div>
     </div>
-  </section>
+  </nav>
+
 
   <div class="empty-div">
-
+    <div class="p-5 text-center ">
+      <div class="container py-5">
+        <p class="col-lg-8 mx-auto lead text-light roboto-condensed-24px fst-italic fw-light">
+         "Doğa, insanın en büyük müttefikidir; ona sahip çıkmak, geleceğe sahip çıkmaktır."
+        </p>
+          <h1 class="text-light playwrite-de-grund fs-2">Franklin D. Roosevelt</h1>
+      </div>
+    </div>
   </div>
 
   <!--Gündem-->
@@ -140,7 +146,7 @@
   </section>
 
   <!--Çözüm Önerileri-->
-  <div class="container-fluid px-4 py-5 content " id="featured">
+  <div class="container-fluid px-4 py-5 content " id="cozumler">
     <h2 class="pb-2 border-bottom playwrite-de-grund text-light ">Çözüm Önerileri</h2>
     <div class="row g-4 py-5 my-2 row-cols-1 row-cols-lg-3">
       <div class="col  ">
@@ -213,34 +219,202 @@
     </div>
   </div>
   <!--Karbon Ayak İzi Testi-->
-  <div class="carbon-foot-step content">
-    <div class="px-4 py-5 my-5 text-center"> 
+  <div class="carbon-foot-step content" id="test">
+    <div class="px-4 py-5 my-5 text-center">
       <h2 class="display-5 pb-4 fw-bold text-light playwrite-de-grund">Hepimiz yaşarken biraz iz bırakıyoruz.</h2>
       <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4 text-light fw-light roboto-condensed-16px"> Peki, senin karbon ayak izin ne kadar büyük? Karbon ayak izini ölç, çevreye etkini keşfet! Basit sorularla hayatındaki karbon salımını öğren, sürdürülebilir adımlar atmaya başla.</p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> <button type="button"
-            class="btn btn-sm">Teste Başla <!DOCTYPE html>
-            <html lang="en">
-            <head>
-              <meta charset="UTF-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Document</title>
-            </head>
-            <body>
-              
-            </body>
-            </html></button> 
-          </div>
+        <p class="lead mb-4 text-light fw-light roboto-condensed-16px"> Peki, senin karbon ve su ayak izin ne kadar
+          büyük?
+          Karbon ve su ayak izini ölç, çevreye olan etkinin farkına var!
+          Basit sorularla hayatındaki karbon salımını ve su tüketimini keşfet,
+          doğaya dost ve sürdürülebilir adımlar atmaya başla.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-center"> <button type="button" class="btn btn-sm">Teste
+            Başla
+          </button>
+        </div>
       </div>
     </div>
   </div>
 
+  <!--Veriler-->
+  <section id="veriler">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container py-4">
+            <div
+              class="row align-items-center justify-content-center flex-column flex-md-row text-center text-md-start">
+              <!-- Lottie / GIF -->
+              <div class="col-md-6 mb-3 mb-md-0 d-flex justify-content-center">
+                <dotlottie-player src="https://lottie.host/04a5038d-d505-49cc-999b-241f77337cd4/A8W6SfrEtv.lottie"
+                  background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay>
+                </dotlottie-player>
+              </div>
 
-  <script src="https://kit.fontawesome.com/d1da082d12.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-    crossorigin="anonymous"></script>
-  <script src="/BluePlanet/script.js"></script>
+              <!-- Text -->
+              <div class="col-md-6">
+                <p class="carousel-text roboto-condensed-16px fs-5">
+                  Dünya çapında yapılan ankete göre
+                  su sektörüne yatırım yapan kurumların %96’sı, 2025’te yatırımlarını sürdürecek ya da artıracaklarını
+                  belirtti.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--2.-->
+        <div class="carousel-item ">
+          <div class="container py-4">
+            <div
+              class="row align-items-center justify-content-center flex-column flex-md-row text-center text-md-start">
+              <!-- Lottie / GIF -->
+              <div class="col-md-6 mb-3 mb-md-0 d-flex justify-content-center">
+                <dotlottie-player src="https://lottie.host/242a865c-2b8e-40ae-8f9a-775a2cccf254/wrvDmMmeWN.lottie"
+                  background="transparent" speed="1" style="width: 300px; height: 300px" autoplay
+                  loop></dotlottie-player>
+              </div>
+
+              <!-- Text -->
+              <div class="col-md-6">
+                <p class="carousel-text roboto-condensed-16px fs-5">
+                  Küresel ölçekte suya olumlu etki hedefleyen firmalar sayesinde “water positive” yaklaşımları 2050’ye
+                  kadar yaygınlaştırılmaya başlandı.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--3.-->
+        <div class="carousel-item ">
+          <div class="container py-4">
+            <div
+              class="row align-items-center justify-content-center flex-column flex-md-row text-center text-md-start">
+              <!-- Lottie / GIF -->
+              <div class="col-md-6 mb-3 mb-md-0 d-flex justify-content-center">
+                <dotlottie-player src="https://lottie.host/f8ebc42a-f6d5-4879-a359-8d242c0fa01d/ZeJFT6I6Bf.lottie"
+                  background="transparent" speed="1" style="width: 300px; height: 300px" loop
+                  autoplay></dotlottie-player>
+                </dotlottie-player>
+              </div>
+
+              <!-- Text -->
+              <div class="col-md-6">
+                <p class="carousel-text roboto-condensed-16px fs-5">
+                  Türkiye, Mart 2025 itibarıyla 21,6 GW’tan fazla güneş enerjisi kurulu gücüne ulaşarak yenilenebilir
+                  enerji hedefini öne çekti.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev">
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next">
+        </button>
+      </div>
+  </section>
+
+  <!--Çocuklara Özel-->
+  <div class="childrens-page" id="cocuklar">
+    <div class="p-5 text-center children-special-page">
+      <div class="container py-5">
+        <h1 class="text-light roboto-condensed">Burası Sadece Çocuklara Özel!</h1>
+        <p class="col-lg-8 mx-auto lead text-light roboto-condensed-16px fs-5">Sadece senin gibi meraklı ve eğlenceyi
+          seven çocuklar için
+          hazırlandı.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-center"> <button type="button" class="btn-child btn-sm">Haydi
+            Gel!
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--Biz Kimiz?-->
+    <div class="container-fluid px-4 py-5" id="biz-kimiz">
+      <h2 class="pb-2 playwrite-de-grund text-light">Biz Kimiz?</h2>
+
+      <div class="row row-cols-1 row-cols-lg-3 g-4 py-5">
+
+        <!-- KART 1 -->
+        <div class="col">
+          <div class="card-who h-100 text-bg-dark shadow-lg rounded-4"
+            style="background-image: url('/BluePlanet/assets/freepik__a-cartoon-of-a-25yearold-caucasian-woman-with-shor__4907.jpeg'); background-size: cover; background-position: center;">
+            <div class="d-flex flex-column justify-content-end h-100 p-4 text-white text-shadow-1 ">
+              <h3 class="mb-3 fw-bold roboto-condensed-24px about-card">Zeynep Karaatlı</h3>
+              <div class="icons d-flex flex-row gap-2 about-card">
+                <i class="bi bi-who-icon bi-github"></i>
+                <i class="bi bi-who-icon bi-linkedin"></i>
+                <i class="bi bi-who-icon bi-instagram"></i>
+                <i class="bi bi-who-icon bi-twitter-x"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KART 2 -->
+        <div class="col">
+          <div class="card-who h-100 text-bg-dark shadow-lg rounded-4"
+            style="background-image: url('/BluePlanet/assets/freepik__a-cartoon-of-a-25yearold-japanese-woman-coding-at-__4906.jpeg'); background-size: cover; background-position: center;">
+            <div class="d-flex flex-column justify-content-end h-100 p-4 text-white text-shadow-1 ">
+              <h3 class="mb-3 fw-bold roboto-condensed-24px about-card">Kübra Kürekçi</h3>
+              <div class="icons d-flex flex-row gap-2 about-card">
+                <i class="bi bi-who-icon bi-github"></i>
+                <i class="bi bi-who-icon bi-linkedin"></i>
+                <i class="bi bi-who-icon bi-instagram"></i>
+                <i class="bi bi-who-icon bi-twitter-x"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KART 3 -->
+        <div class="col">
+          <div class="card-who h-100 text-bg-dark shadow-lg rounded-4"
+            style="background-image: url('/BluePlanet/assets/freepik__a-cartoon-of-a-25yearold-eastern-european-woman-co__4905.jpeg'); background-size: cover; background-position: center;">
+            <div class="d-flex flex-column justify-content-end h-100 p-4 text-white text-shadow-1 ">
+              <h3 class="mb-3 fw-bold roboto-condensed-24px about-card">Teslime Dede</h3>
+              <div class="icons d-flex flex-row gap-2 about-card">
+                <i class="bi bi-who-icon bi-github"></i>
+                <i class="bi bi-who-icon bi-linkedin"></i>
+                <i class="bi bi-who-icon bi-instagram"></i>
+                <i class="bi bi-who-icon bi-twitter-x"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!--Footer-->
+
+    <div class="container-fluid" id="footer">
+      <footer class="py-3 m-0">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 ">Gündem</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 ">Çözüm Önerileri</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2">İz Testi</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2">Veriler</a></li>
+          <li class="nav-item">
+            <a class="nav-link child-special" href="#">Çocuklara Özel</a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link px-2">Biz Kimiz?</a></li>
+        </ul>
+        <p class="text-center roboto-condensed-16px text-light">© 2025 <br> W-Code 2.0 | Kodluyoruz & Gelecek Hayalim
+        </p>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://kit.fontawesome.com/d1da082d12.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"></script>
+    <script src="/BluePlanet/script.js"></script>
 </body>
 
 </html>
