@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Çocuklar Özel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Indie+Flower&family=Playwrite+DE+Grund:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand position-relative mx-5" href="/index.html">
+        <img id="logo" src="/assets/logo.png" alt="Logo" />
+        <span span class="text-light logo-back-text playwrite-de-grund">BluePlanet</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/Haberler/gundem.html">Gündem</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Çözüm Önerileri</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="izTestDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              İz Testi
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="izTestDropdown">
+              <li>
+                <a class="dropdown-item nav-link" href="#test1">Karbon Ayak İzi Testi</a>
+              </li>
+              <li>
+                <a class="dropdown-item nav-link" href="#test2">Su İzi Testi</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Veriler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link child-special" href="/cocuklar-özel/cocuk.html">Çocuklara Özel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Biz Kimiz?</a>
+          </li>
+          <div class="d-flex ms-auto p-1 m-0 contact-icon align-items-center justify-content-center">
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring delay"></div>
+            <img src=" /assets/contact_support_52dp_FFF_FILL0_wght400_GRAD0_opsz48.png" alt="Destek" />
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--Çocuklara Özel İçerik-->
+  <div class="p-5 text-center children-special-page">
+    <div class="container py-5">
+      <h1 class="playwrite-de-grund text-light pb-3">
+        Çocuklara Özel Sayfamıza Hoşgeldin Çevreci Dostumuz!
+      </h1>
+      <p class="col-lg-8 mx-auto lead roboto-condensed-16px text-light">
+        Aşağıda eğlenirken öğrenebileceğin birbirinden eğlenceli 3 oyun seni
+        bekliyor: <br />
+
+        Çöpleri Ayrıştırma: Çöpleri doğru kutuya sürükle, doğayı koru! <br />
+        Ağaç Dikme: Toprağı hazırla, fidanını dik, doğaya bir nefes ol! <br />
+        Musluğu Kapat: Akan muslukları hızlıca kapat, su israfını önle! <br />
+
+        Haydi başla, senin gibi minik kahramanlara ihtiyacımız var!
+      </p>
+    </div>
+  </div>
+<!--Oyun 1-->
+  <div class="game-description">
+      <h2 class="text-light roboto-condensed-24px "> Çöpleri Ayrıştırma Oyunu</h2></div>
+  <section class="oyunBir">
+    <div class="container">
+      <div class="score pb-4">Puan: <span id="score">0</span></div>
+      <div id="celebration" style="display:none; margin-top: 20px;">
+        <h3 class="roboto-condensed-24px">Tebrikler! Oyunu Tamamladın!</h3>
+        <img src="/cocuklar-özel/cocuklar_assets/Animation - 1751538769034.gif"
+          alt="Kutlama!" width="200" />
+      </div>
+
+      <div class="items">
+        <img src="/cocuklar-özel/cocuklar_assets/banana-peel.png" class="item" draggable="true" data-type="organik"
+          alt="Muz Kabuğu" />
+        <img src="/cocuklar-özel/cocuklar_assets/plastic-bottle.png" class="item" draggable="true" data-type="geri"
+          alt="Plastik Şişe" />
+        <img src="/cocuklar-özel/cocuklar_assets/glass-bottle.png" class="item" draggable="true" data-type="geri"
+          alt="Cam Şişe" />
+        <img src="/cocuklar-özel/cocuklar_assets/battery.png" class="item" draggable="true" data-type="diger"
+          alt="Pil" />
+        <img src="/cocuklar-özel/cocuklar_assets/eated-apple.png" class="item" draggable="true" data-type="organik"
+          alt="Elma Kabuğu" />
+      </div>
+
+      <div class="game-area">
+        <div class="bin d-flex flex-column justify-content-center align-items-center" data-accept="organik" ondragover="allowDrop(event)" ondrop="drop(event)">
+          <h3 class="roboto-condensed-16px fw-bold">Organik</h3>
+          <img src="/cocuklar-özel/cocuklar_assets/4e9ac647-4519-4ff1-9f24-cca4a77bfe65_removalai_preview.png"
+            width="100" alt="Organik Kutusu" />
+        </div>
+        <div class="bin d-flex flex-column justify-content-center align-items-center" data-accept="geri" ondragover="allowDrop(event)" ondrop="drop(event)">
+          <h3 class="roboto-condensed-16px fw-bold">Geri Dönüşüm</h3>
+          <img src="/cocuklar-özel/cocuklar_assets/865b16a5-4c55-49c3-b614-82fbad9cfa9a_removalai_preview.png"
+            width="100" alt="Geri Dönüşüm Kutusu" />
+        </div>
+        <div class="bin d-flex flex-column justify-content-center align-items-center" data-accept="diger" ondragover="allowDrop(event)" ondrop="drop(event)">
+          <h3 class="roboto-condensed-16px fw-bold">Diğer</h3>
+          <img src="/cocuklar-özel/cocuklar_assets/b37cad0f-ccd2-42bc-9314-4c6a085cc025_removalai_preview.png"
+            width="100" alt="Diğer Kutusu" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--İkinci Oyun-->
+  <section class="oyunİki">
+    <div class="game-description">
+      <h2 class="text-light roboto-condensed-24px ">Ağaş Dikme Oyunu</h2></div>
+      <div id="gameArea">
+  <div id="ground"></div>
+  <img src="/cocuklar-özel/cocuklar_assets/shovel.png" id="shovel" draggable="true" alt="Kürek">
+  <img src="/cocuklar-özel/cocuklar_assets/sapling.png" id="saplingIcon" draggable="true" alt="Fidan">
+  <img src="/cocuklar-özel/cocuklar_assets/watering-can.png" id="wateringCan" draggable="true" alt="Sulama Kabı">
+</div>
+</section>
+
+<!--Üçüncü Oyun-->
+<section class="oyunİki">
+    <div id="odalar">
+       <div class="game-description">
+      <h2 class="text-light roboto-condensed-24px ">Musluğu Kapat</h2></div>
+  <div class="oda active" id="mutfak">
+  
+  </div>
+
+  <div class="oda" id="banyo">
+  
+  </div>
+
+  <div class="oda" id="bahce">
+  
+  </div>
+</div>
+
+</section>
+
+  <div class="container-fluid" id="footer">
+    <footer class="py-3 m-0">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2">Gündem</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2">Çözüm Önerileri</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2">İz Testi</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2">Veriler</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link child-special" href="#">Çocuklara Özel</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2">Biz Kimiz?</a>
+        </li>
+      </ul>
+      <p class="text-center roboto-condensed-16px text-light">
+        © 2025 <br />
+        W-Code 2.0 | Kodluyoruz & Gelecek Hayalim
+      </p>
+    </footer>
+  </div>
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  <script src="https://kit.fontawesome.com/d1da082d12.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+  <script src="/script.js"></script>
+</body>
+
+</html>
