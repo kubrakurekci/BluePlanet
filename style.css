@@ -589,3 +589,80 @@ margin: 8px;
   color: white;
   align-items: center;
 }
+#gameArea {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url(/cocuklar-özel/cocuklar_assets/Ekran\ görüntüsü\ 2025-07-03\ 153635.png);
+  overflow: hidden;
+   background-size:cover;     
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+#ground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-image: url('/cocuklar-özel/cocuklar_assets/ground.png');
+  background-size: cover;     
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+#shovel {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 60px;
+  cursor: grab;
+  z-index: 10;
+}
+#shovel:hover{
+  background: linear-gradient(rgba(78, 86, 45, 0.778), rgba(75, 86, 45, 0.773));
+  border-radius: 24px;
+}
+
+#saplingIcon {
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
+  width: 100px;
+  cursor: grab;
+  z-index: 10;
+}
+#saplingIcon:hover{
+  background: linear-gradient(rgba(78, 86, 45, 0.778), rgba(75, 86, 45, 0.773));
+  border-radius: 24px;
+}
+
+.element {
+  position: absolute;
+  width: 50px;
+  pointer-events: none;
+  transition: transform 2s ease-in-out;
+  transform-origin: bottom center;
+}
+#wateringCan{
+  width: 60px;
+    position: absolute;
+    bottom: 20px;
+  left: 200px;
+}
+#wateringCan:hover{
+  background: linear-gradient(rgba(78, 86, 45, 0.778), rgba(75, 86, 45, 0.773));
+  border-radius: 24px;
+}
+@keyframes splash {
+  0% { transform: scale(0); opacity: 0.8; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+#mutfak{
+   background-image: url('/cocuklar-özel/cocuklar_assets/kitchen.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
