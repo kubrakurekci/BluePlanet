@@ -231,6 +231,9 @@ position: relative;
   cursor: pointer;
   
 }
+.btn-container>button{
+  border:none;
+}
 
 .gundem-card-title {
   position: relative;
@@ -513,7 +516,7 @@ margin: 8px;
   position: relative;
   background-image:
     linear-gradient(rgba(51, 45, 86, 0.778), rgba(51, 45, 86, 0.773)),
-    url('/cocuklar-özel/cocuklar_assets/garbage-sorting-for-childs-.jpg');
+    url('/cocuklar-özel/cocuklar_assets/garbage-dump-in-front-of-the-house.jpg');
   background-size: cover;
   background-position: center;
   padding: 24px;

@@ -1,3 +1,12 @@
+
+  const button = document.querySelector('.btn-child');
+  if (button) {
+    button.addEventListener('click', () => {
+      window.location.href = '/cocuklar-özel/cocuk.html';
+    });
+  }
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const scrollNext = document.querySelector(".scroll-next");
     const scrollPrev = document.querySelector(".scroll-previous");
@@ -110,7 +119,7 @@ const wateringCan = document.getElementById('wateringCan');
 let offsetX = 0;
 let offsetY = 0;
 let dugSpots = [];
-let plantedSaplings = []; // sulanmayı bekleyen fidanlar
+let plantedSaplings = []; 
 
 shovel.addEventListener('dragstart', (e) => {
   const rect = shovel.getBoundingClientRect();
