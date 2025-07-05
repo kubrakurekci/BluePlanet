@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Karbon Ayak İzi Testi</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <!-- index.html ile aynı css dosyasını kullanıyoruz -->
+  </head>
+
+  <body class="bg-dark text-light">
+    <div class="container py-5">
+      <!-- 1. Bölüm: Karbon Ayak İzi Nedir? -->
+      <section id="info" class="mb-5">
+        <h2 class="playwrite-de-grund">Karbon Ayak İzi Nedir?</h2>
+        <div class="row align-items-center mt-4">
+          <div class="col-md-6">
+            <p class="roboto-condensed-16px">
+              Karbon ayak izi, bireylerin, şirketlerin veya ülkelerin doğrudan
+              ve dolaylı olarak atmosfere saldığı toplam sera gazı miktarını
+              ifade eder. Bu gazlar genellikle karbondioksit (CO2) ve metan gibi
+              gazlardır. Günlük yaşamımızda kullandığımız enerji, taşıtlar,
+              tükettiğimiz ürünler ve atıklar karbon ayak izimizi etkiler.
+            </p>
+          </div>
+          <div class="col-md-6 text-center">
+            <!-- Görsel için yer: buraya bir karbon ayak izi simgesi ya da doğa ile ilgili görsel koyabilirsin -->
+            <img
+              src="./test-assets/gorse1.png"
+              alt="Karbon Ayak İzi Görseli"
+              class="img-fluid rounded shadow"
+              style="max-height: 250px"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Bölüm: Karbon Ayak İzi Testi -->
+      <section id="test" class="mb-5">
+        <h2 class="playwrite-de-grund mb-4">Karbon Ayak İzi Testi</h2>
+        <form id="carbonForm">
+          <div class="mb-3">
+            <label for="carKm" class="form-label"
+              >Haftada kaç kilometre araba kullanıyorsunuz?</label
+            >
+            <input
+              type="number"
+              id="carKm"
+              class="form-control"
+              min="0"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="electricity" class="form-label"
+              >Aylık elektrik tüketiminiz kaç kWh?</label
+            >
+            <input
+              type="number"
+              id="electricity"
+              class="form-control"
+              min="0"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="meat" class="form-label"
+              >Haftada kaç gün et tüketiyorsunuz?</label
+            >
+            <select id="meat" class="form-select" required>
+              <option value="" disabled selected>Seçiniz</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3 ve üzeri</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Hesapla</button>
+        </form>
+
+        <div id="result" class="mt-4 roboto-condensed-16px"></div>
+      </section>
+
+      <!-- 3. Bölüm: Azaltmak İçin Neler Yapabiliriz -->
+      <section id="tips">
+        <h2 class="playwrite-de-grund mb-4">
+          Karbon Ayak İzini Azaltmak İçin Neler Yapabiliriz?
+        </h2>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div
+              class="features card-bg save-energy p-3 h-100 text-light rounded shadow"
+            >
+              <div class="feature-icon fs-2 mb-3">
+                <i class="bi bi-lightbulb-fill"></i>
+              </div>
+              <h3 class="roboto-condensed-24px">Ampulleri LED ile değiştir</h3>
+              <p class="roboto-condensed-16px">
+                LED ampuller enerji tasarrufu sağlar ve karbon salımını azaltır.
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div
+              class="features card-bg save-water p-3 h-100 text-light rounded shadow"
+            >
+              <div class="feature-icon fs-2 mb-3">
+                <i class="bi bi-droplet-fill"></i>
+              </div>
+              <h3 class="roboto-condensed-24px">Su tasarrufu yap</h3>
+              <p class="roboto-condensed-16px">
+                Bulaşıkları sudan geçirmeden makineye koymak gibi
+                alışkanlıklarla suyu koru.
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div
+              class="features card-bg unplug-devices p-3 h-100 text-light rounded shadow"
+            >
+              <div class="feature-icon fs-2 mb-3">
+                <i class="bi bi-plug-fill"></i>
+              </div>
+              <h3 class="roboto-condensed-24px">
+                Kullanılmayan cihazları kapat
+              </h3>
+              <p class="roboto-condensed-16px">
+                Elektronik cihazları prizden çekerek enerji tasarrufu
+                sağlayabilirsin.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Basit karbon ayak izi hesaplama örneği
+      document
+        .getElementById("carbonForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const carKm = Number(document.getElementById("carKm").value);
+          const electricity = Number(
+            document.getElementById("electricity").value
+          );
+          const meat = Number(document.getElementById("meat").value);
+
+          // Basit katsayılarla tahmini hesaplama (örnek değerler)
+          const carEmissions = carKm * 0.21; // kg CO2 per km
+          const electricityEmissions = electricity * 0.5; // kg CO2 per kWh
+          let meatEmissions = 0;
+          if (meat === 1) meatEmissions = 20;
+          else if (meat === 2) meatEmissions = 35;
+          else if (meat === 3) meatEmissions = 50;
+
+          const totalEmissions =
+            carEmissions + electricityEmissions + meatEmissions;
+
+          const resultDiv = document.getElementById("result");
+          resultDiv.innerHTML = `<strong>Tahmini Karbon Ayak İzin:</strong> ${totalEmissions.toFixed(
+            2
+          )} kg CO₂ / ay`;
+        });
+    </script>
+  </body>
+</html>
