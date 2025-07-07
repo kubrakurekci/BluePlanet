@@ -12,10 +12,69 @@
   object-fit: cover;
   z-index: -1;
 }
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  background-color: #E3EEB2;
+  color: #332D56;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
+  transition: opacity 0.3s;
+}
+.bi-chevron-up{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#scrollToTopBtn:hover {
+  background-color: #332d56;
+  color: white;
+}
 
 .content {
   z-index: 1;
 }
+@keyframes slideOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-out {
+  animation: slideOutLeft 0.5s forwards;
+}
+
+.slide-in {
+  animation: slideInRight 0.5s forwards;
+}
+
 #logo {
     width:50px;
     position: relative;
@@ -211,12 +270,17 @@ position: relative;
       margin-bottom: 20px;
       margin-top: 200px;
     }
-    .gundem-scroll {
+ .gundem-scroll {
   display: flex;
   overflow-x: auto;
   gap: 16px;
-  padding: 16px;
+  scroll-behavior: auto; 
+  scrollbar-width: none;
 }
+.gundem-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 
 .gundem-card {
   flex-shrink: 0;
@@ -227,9 +291,7 @@ position: relative;
   color: white;
   display: flex;
   flex-direction: column;
-  overflow: visible;
-  cursor: pointer;
-  
+  overflow: visible;  
 }
 
 .gundem-card-title {
@@ -513,7 +575,7 @@ margin: 8px;
   position: relative;
   background-image:
     linear-gradient(rgba(51, 45, 86, 0.778), rgba(51, 45, 86, 0.773)),
-    url('/cocuklar-özel/cocuklar_assets/garbage-sorting-for-childs-.jpg');
+    url('/cocuklar-özel/cocuklar_assets/garbage-dump-in-front-of-the-house.jpg');
   background-size: cover;
   background-position: center;
   padding: 24px;
@@ -521,9 +583,10 @@ margin: 8px;
 .game-description{
   background-color: #332D56;
   background-size: cover;
-  height: 10vh;
+  height: auto;
   text-align: center;
-  padding-top: 16px;
+  padding: 56px 8px 8px 8px;
+  
 }
 .game-area {
   display: flex;
@@ -658,11 +721,80 @@ margin: 8px;
   100% { transform: scale(3); opacity: 0; }
 }
 
-#mutfak{
-   background-image: url('/cocuklar-özel/cocuklar_assets/kitchen.png');
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 500px;
+/* Oyun alanı: musluklar burada */
+#game-area-water {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  
+}
+.game-area-bg{
+  background-image: url(/cocuklar-özel/cocuklar_assets/sink.png);
+  padding: 24px;
+}
+.score-area{
+  padding: 16px;
+  align-items: center;
+  justify-content: center;
+  background-color: #332d56bb;
+  width: 250px;
+  height: auto;
+  border-radius: 16px;
+  color: white;
+    margin: 16px auto; 
+  text-align: center;
+}
+.water-game{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.faucet {
+  width: 100px;
+  height: 150px;
+  background: url('/cocuklar-özel/cocuklar_assets/opened-faucet.png') no-repeat center;
+  background-size: contain;
   position: relative;
+  cursor: pointer;
+}
+
+
+.faucet.closed {
+  background-image: url('/cocuklar-özel/cocuklar_assets/closed-faucet.png');
+}
+
+#celebration2 {
+  display: none;
+  margin-top: 20px;
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1000;
+}
+#startButton{
+  background-color: #FFFB00;
+  border: 1px solid white;
+  color: #332D56;
+  padding: 8px 32px ;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#startButton:hover{
+transform: scale(1.2);
+background-color: orange;
+color: white;
+}
+.startButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

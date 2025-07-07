@@ -55,36 +55,40 @@
             <a class="nav-link" href="#veriler">Veriler</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link child-special" href="#">Çocuklara Özel</a>
+            <a class="nav-link child-special" href="#cocuklar">Çocuklara Özel</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Biz Kimiz?</a>
+            <a class="nav-link" href="#biz-kimiz">Biz Kimiz?</a>
           </li>
-          <div class="d-flex ms-auto p-1 m-0 contact-icon align-items-center justify-content-center">
-            <div class="pulse-ring"></div>
-            <div class="pulse-ring delay"></div>
-            <img src=" /assets/contact_support_52dp_FFF_FILL0_wght400_GRAD0_opsz48.png" alt="Destek">
-          </div>
+        <a href="iletisim.html" style="text-decoration: none;">
+  <div class="d-flex ms-auto p-1 m-0 contact-icon align-items-center justify-content-center">
+    <div class="pulse-ring"></div>
+    <div class="pulse-ring delay"></div>
+    <img src="/assets/contact_support_52dp_FFF_FILL0_wght400_GRAD0_opsz48.png" alt="Destek">
+  </div>
+</a>
+
         </ul>
       </div>
     </div>
   </nav>
 
 
-  <div class="empty-div">
-    <div class="p-5 text-center ">
-      <div class="container py-5">
-        <p class="col-lg-8 mx-auto lead text-light roboto-condensed-24px fst-italic fw-light">
-         "Doğa, insanın en büyük müttefikidir; ona sahip çıkmak, geleceğe sahip çıkmaktır."
-        </p>
-          <h1 class="text-light playwrite-de-grund fs-2">Franklin D. Roosevelt</h1>
-      </div>
+<div class="empty-div">
+  <div class="p-5 text-center">
+    <div class="container py-5">
+      <p id="quoteText" class="col-lg-8 mx-auto lead text-light roboto-condensed-24px fst-italic fw-light">
+        "Doğa, insanın en büyük müttefikidir; ona sahip çıkmak, geleceğe sahip çıkmaktır."
+      </p>
+      <h1 id="quoteAuthor" class="text-light playwrite-de-grund fs-2">Franklin D. Roosevelt</h1>
     </div>
   </div>
+</div>
+
 
   <!--Gündem-->
   <section id="gundem" class="content">
-    <div class="container-fluid ">
+    <div class="container-fluid p-5">
       <div class="gundem-scroll">
         <div class="gundem-card" href="#">
           <div class="gundem-card-title">
@@ -147,7 +151,7 @@
 
   <!--Çözüm Önerileri-->
   <div class="container-fluid px-4 py-5 content " id="cozumler">
-    <h2 class="pb-2 border-bottom playwrite-de-grund text-light ">Çözüm Önerileri</h2>
+    <h2 class="pb-2 pt-5 border-bottom playwrite-de-grund text-light ">Çözüm Önerileri</h2>
     <div class="row g-4 py-5 my-2 row-cols-1 row-cols-lg-3">
       <div class="col  ">
         <div class="features d-flex flex-column card-bg save-water">
@@ -219,7 +223,7 @@
     </div>
   </div>
   <!--Karbon Ayak İzi Testi-->
-  <div class="carbon-foot-step content" id="test">
+  <div class="carbon-foot-step content p-5" id="test">
     <div class="px-4 py-5 my-5 text-center">
       <h2 class="display-5 pb-4 fw-bold text-light playwrite-de-grund">Hepimiz yaşarken biraz iz bırakıyoruz.</h2>
       <div class="col-lg-6 mx-auto">
@@ -334,7 +338,7 @@
 
     <!--Biz Kimiz?-->
     <div class="container-fluid px-4 py-5" id="biz-kimiz">
-      <h2 class="pb-2 playwrite-de-grund text-light">Biz Kimiz?</h2>
+      <h2 class="pb-2 playwrite-de-grund text-light py-5">Biz Kimiz?</h2>
 
       <div class="row row-cols-1 row-cols-lg-3 g-4 py-5">
 
@@ -408,6 +412,7 @@
         </p>
       </footer>
     </div>
+<button id="scrollToTopBtn" title="Yukarı Çık"><i class="bi bi-chevron-up"></i></button>
 
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     <script src="https://kit.fontawesome.com/d1da082d12.js" crossorigin="anonymous"></script>
