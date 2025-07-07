@@ -25,7 +25,7 @@
 
   <nav class="navbar fixed-top navbar-expand-lg ">
     <div class="container-fluid">
-      <a class="navbar-brand position-relative mx-5" href="#">
+      <a class="navbar-brand position-relative mx-5" href="/index.html">
         <img id="logo" src="/assets/logo.png" alt="Logo" />
         <span span class="text-light logo-back-text playwrite-de-grund">BluePlanet</span>
       </a>
@@ -42,7 +42,7 @@
             <a class="nav-link" href="#cozumler">Çözüm Önerileri</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="izTestDropdown" role="button" data-bs-toggle="dropdown"
+            <a class="nav-link dropdown-toggle" href="#test" id="izTestDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               İz Testi
             </a>
@@ -55,16 +55,19 @@
             <a class="nav-link" href="#veriler">Veriler</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link child-special" href="#">Çocuklara Özel</a>
+            <a class="nav-link child-special" href="#cocuklar">Çocuklara Özel</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Biz Kimiz?</a>
+            <a class="nav-link" href="#biz-kimiz">Biz Kimiz?</a>
           </li>
-          <div class="d-flex ms-auto p-1 m-0 contact-icon align-items-center justify-content-center">
-            <div class="pulse-ring"></div>
-            <div class="pulse-ring delay"></div>
-            <img src=" /assets/contact_support_52dp_FFF_FILL0_wght400_GRAD0_opsz48.png" alt="Destek">
-          </div>
+        <a href="iletisim.html" style="text-decoration: none;">
+  <div class="d-flex ms-auto p-1 m-0 contact-icon align-items-center justify-content-center">
+    <div class="pulse-ring"></div>
+    <div class="pulse-ring delay"></div>
+    <img src="/assets/contact_support_52dp_FFF_FILL0_wght400_GRAD0_opsz48.png" alt="Destek">
+  </div>
+</a>
+
         </ul>
       </div>
     </div>
@@ -81,12 +84,14 @@
       </div>
     </div>
   </div>
+</div>
+
 
   <!--Gündem-->
   <section id="gundem" class="content">
-    <div class="container-fluid ">
+    <div class="container-fluid p-5">
       <div class="gundem-scroll">
-        <div class="gundem-card" href="#">
+        <div class="gundem-card" href="/Haberler/gundem.html">
           <div class="gundem-card-title">
             <h5 class="roboto-condensed-48px">İklime Uyum İçin İstanbul’da Konferans</h5>
           </div>
@@ -95,7 +100,7 @@
               Projesi” kapsamında İstanbul’da bir sempozyum düzenlendi.</p>
           </div>
         </div>
-        <div class="gundem-card" href="#">
+        <div class="gundem-card" href="/Haberler/gundem.html">
           <div class="gundem-card-title">
             <h5 class="roboto-condensed-48px">Türkiye’nin İlk İklim Kanunu Geliyor</h5>
           </div>
@@ -104,7 +109,7 @@
               İklim Kanunu teklifi TBMM’ye sunuldu.</p>
           </div>
         </div>
-        <div class="gundem-card " href="#">
+        <div class="gundem-card " href="/Haberler/gundem.html">
           <div class="gundem-card-title">
             <h5 class="roboto-condensed-48px">Türk Toplumunda İklim Endişesi Artıyor</h5>
           </div>
@@ -113,7 +118,7 @@
               değişikliğinden endişe duyuyor.</p>
           </div>
         </div>
-        <div class="gundem-card" href="#">
+        <div class="gundem-card" href="/Haberler/gundem.html">
           <div class="gundem-card-title">
             <h5 class="roboto-condensed-48px">Su Yönetimi ve Altyapıda Stratejik Yaklaşım</h5>
           </div>
@@ -122,7 +127,7 @@
               taşkın ve kuraklık riskine karşı planlama yapıyor.</p>
           </div>
         </div>
-        <div class="gundem-card" href="#">
+        <div class="gundem-card" href="/Haberler/gundem.html">
           <div class="gundem-card-title">
             <h5 class="roboto-condensed-48px">İstanbul Büyükşehir Belediyesi (İBB) Küresel CDP "A Listesi"nde</h5>
           </div>
@@ -140,14 +145,14 @@
         <i class="bi bi-chevron-right"></i>
       </button>
       <div class="btn-container">
-        <button class="btn roboto-condensed-btn">Tüm Haberleri İncele</button>
+        <button><a class=" btn roboto-condensed-btn" href="/Haberler/gundem.html">Tüm Haberleri İncele</a> </button>
       </div>
     </div>
   </section>
 
   <!--Çözüm Önerileri-->
   <div class="container-fluid px-4 py-5 content " id="cozumler">
-    <h2 class="pb-2 border-bottom playwrite-de-grund text-light ">Çözüm Önerileri</h2>
+    <h2 class="pb-2 pt-5 border-bottom playwrite-de-grund text-light ">Çözüm Önerileri</h2>
     <div class="row g-4 py-5 my-2 row-cols-1 row-cols-lg-3">
       <div class="col  ">
         <div class="features d-flex flex-column card-bg save-water">
@@ -219,7 +224,7 @@
     </div>
   </div>
   <!--Karbon Ayak İzi Testi-->
-  <div class="carbon-foot-step content" id="test">
+  <div class="carbon-foot-step content p-5" id="test">
     <div class="px-4 py-5 my-5 text-center">
       <h2 class="display-5 pb-4 fw-bold text-light playwrite-de-grund">Hepimiz yaşarken biraz iz bırakıyoruz.</h2>
       <div class="col-lg-6 mx-auto">
@@ -325,66 +330,73 @@
           seven çocuklar için
           hazırlandı.
         </p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-center"> <button type="button" class="btn-child btn-sm">Haydi
-            Gel!
-          </button>
+        <div class="d-grid gap-2 d-sm-flex justify-content-center"> <button id="startButton" type="button"
+            class="btn-child btn-sm">Haydi Gel!</button>
+
         </div>
       </div>
     </div>
 
     <!--Biz Kimiz?-->
     <div class="container-fluid px-4 py-5" id="biz-kimiz">
-      <h2 class="pb-2 playwrite-de-grund text-light">Biz Kimiz?</h2>
+      <h2 class="pb-2 playwrite-de-grund text-light py-5">Biz Kimiz?</h2>
 
       <div class="row row-cols-1 row-cols-lg-3 g-4 py-5">
 
         <!-- KART 1 -->
-        <div class="col">
-          <div class="card-who h-100 text-bg-dark shadow-lg rounded-4"
-            style="background-image: url(' /assets/freepik__a-cartoon-of-a-25yearold-caucasian-woman-with-shor__4907.jpeg'); background-size: cover; background-position: center;">
-            <div class="d-flex flex-column justify-content-end h-100 p-4 text-white text-shadow-1 ">
-              <h3 class="mb-3 fw-bold roboto-condensed-24px about-card">Zeynep Karaatlı</h3>
-              <div class="icons d-flex flex-row gap-2 about-card">
-                <i class="bi bi-who-icon bi-github"></i>
-                <i class="bi bi-who-icon bi-linkedin"></i>
-                <i class="bi bi-who-icon bi-instagram"></i>
-                <i class="bi bi-who-icon bi-twitter-x"></i>
+        <a href="https://linkedin.com/in/zeynepkaraatli" class="text-decoration-none">
+          <div class="col">
+            <div class="card-who h-100 text-bg-dark shadow-lg rounded-4"
+              style="background-image: url('/assets/freepik__a-cartoon-of-a-25yearold-caucasian-woman-with-shor__4907.jpeg'); background-size: cover; background-position: center;">
+              <div class="d-flex flex-column justify-content-end h-100 p-4 text-white text-shadow-1">
+                <h3 class="mb-3 fw-bold roboto-condensed-24px about-card">Zeynep Karaatlı</h3>
+                <div class="icons d-flex flex-row gap-2 about-card">
+                  <i class="bi bi-who-icon bi-github"></i>
+                  <i class="bi bi-who-icon bi-linkedin"></i>
+                  <i class="bi bi-who-icon bi-instagram"></i>
+                  <i class="bi bi-who-icon bi-twitter-x"></i>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </a>
 
         <!-- KART 2 -->
-        <div class="col">
-          <div class="card-who h-100 text-bg-dark shadow-lg rounded-4"
-            style="background-image: url(' /assets/freepik__a-cartoon-of-a-25yearold-japanese-woman-coding-at-__4906.jpeg'); background-size: cover; background-position: center;">
-            <div class="d-flex flex-column justify-content-end h-100 p-4 text-white text-shadow-1 ">
-              <h3 class="mb-3 fw-bold roboto-condensed-24px about-card">Kübra Kürekçi</h3>
-              <div class="icons d-flex flex-row gap-2 about-card">
-                <i class="bi bi-who-icon bi-github"></i>
-                <i class="bi bi-who-icon bi-linkedin"></i>
-                <i class="bi bi-who-icon bi-instagram"></i>
-                <i class="bi bi-who-icon bi-twitter-x"></i>
+        <a href="https://linkedin.com/in/zeynepkaraatli" class="text-decoration-none">
+          <div class="col">
+            <div class="card-who h-100 text-bg-dark shadow-lg rounded-4"
+              style="background-image: url('/assets/freepik__a-cartoon-of-a-25yearold-japanese-woman-coding-at-__4906.jpeg'); background-size: cover; background-position: center;">
+              <div class="d-flex flex-column justify-content-end h-100 p-4 text-white text-shadow-1">
+                <h3 class="mb-3 fw-bold roboto-condensed-24px about-card">Kübra Kürekçi</h3>
+                <div class="icons d-flex flex-row gap-2 about-card">
+                  <i class="bi bi-who-icon bi-github"></i>
+                  <i class="bi bi-who-icon bi-linkedin"></i>
+                  <i class="bi bi-who-icon bi-instagram"></i>
+                  <i class="bi bi-who-icon bi-twitter-x"></i>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </a>
+
 
         <!-- KART 3 -->
-        <div class="col">
-          <div class="card-who h-100 text-bg-dark shadow-lg rounded-4"
-            style="background-image: url(' /assets/freepik__a-cartoon-of-a-25yearold-eastern-european-woman-co__4905.jpeg'); background-size: cover; background-position: center;">
-            <div class="d-flex flex-column justify-content-end h-100 p-4 text-white text-shadow-1 ">
-              <h3 class="mb-3 fw-bold roboto-condensed-24px about-card">Teslime Dede</h3>
-              <div class="icons d-flex flex-row gap-2 about-card">
-                <i class="bi bi-who-icon bi-github"></i>
-                <i class="bi bi-who-icon bi-linkedin"></i>
-                <i class="bi bi-who-icon bi-instagram"></i>
-                <i class="bi bi-who-icon bi-twitter-x"></i>
+        <a href="https://linkedin.com/in/zeynepkaraatli" class="text-decoration-none">
+          <div class="col">
+            <div class="card-who h-100 text-bg-dark shadow-lg rounded-4"
+              style="background-image: url('/assets/freepik__a-cartoon-of-a-25yearold-eastern-european-woman-co__4905.jpeg'); background-size: cover; background-position: center;">
+              <div class="d-flex flex-column justify-content-end h-100 p-4 text-white text-shadow-1">
+                <h3 class="mb-3 fw-bold roboto-condensed-24px about-card">Kübra Kürekçi</h3>
+                <div class="icons d-flex flex-row gap-2 about-card">
+                  <i class="bi bi-who-icon bi-github"></i>
+                  <i class="bi bi-who-icon bi-linkedin"></i>
+                  <i class="bi bi-who-icon bi-instagram"></i>
+                  <i class="bi bi-who-icon bi-twitter-x"></i>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </a>
 
       </div>
     </div>
@@ -395,7 +407,7 @@
     <div class="container-fluid" id="footer">
       <footer class="py-3 m-0">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-          <li class="nav-item"><a href="#" class="nav-link px-2 ">Gündem</a></li>
+          <li class="nav-item"><a href="/Haberler/gundem.html" class="nav-link px-2 ">Gündem</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2 ">Çözüm Önerileri</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2">İz Testi</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2">Veriler</a></li>
@@ -408,6 +420,7 @@
         </p>
       </footer>
     </div>
+<button id="scrollToTopBtn" title="Yukarı Çık"><i class="bi bi-chevron-up"></i></button>
 
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     <script src="https://kit.fontawesome.com/d1da082d12.js" crossorigin="anonymous"></script>
