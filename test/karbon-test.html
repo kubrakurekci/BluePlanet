@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Karbon Ayak İzi Testi</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <!-- index.html ile aynı css dosyasını kullanıyoruz -->
+    <link rel="stylesheet" href="karbon-test.css" />
+  </head>
+
+  <body class="bg-dark text-light">
+    <!-- NAVBAR BAŞLANGIÇ -->
+    <nav class="navbar fixed-top navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand position-relative mx-5" href="/index.html">
+          <img id="logo" src="/assets/logo.png" alt="Logo" />
+          <span class="text-light logo-back-text playwrite-de-grund"
+            >BluePlanet</span
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#gundem">Gündem</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#cozumler"
+                >Çözüm Önerileri</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#test"
+                id="izTestDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                İz Testi
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="izTestDropdown">
+                <li>
+                  <a
+                    class="dropdown-item nav-link"
+                    href="/test/karbon-test.html"
+                    >Karbon Ayak İzi Testi</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item nav-link" href="/test/su-test.html"
+                    >Su İzi Testi</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#veriler">Veriler</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link child-special" href="/index.html#cocuklar"
+                >Çocuklara Özel</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#biz-kimiz">Biz Kimiz?</a>
+            </li>
+            <div
+              class="d-flex ms-auto p-1 m-0 contact-icon align-items-center justify-content-center"
+            >
+              <div class="pulse-ring"></div>
+              <div class="pulse-ring delay"></div>
+              <img
+                src="/assets/contact_support_52dp_FFF_FILL0_wght400_GRAD0_opsz48.png"
+                alt="Destek"
+              />
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBAR BİTİŞ -->
+
+    <div class="container py-5">
+      <!-- 1. Bölüm: Karbon Ayak İzi Nedir? -->
+      <section id="info" class="mb-5">
+        <h2 class="playwrite-de-grund">Karbon Ayak İzi Nedir?</h2>
+        <div class="row align-items-center mt-4">
+          <div class="col-md-6">
+            <p class="roboto-condensed-16px">
+              Karbon ayak izi, bireylerin, şirketlerin veya ülkelerin doğrudan
+              ve dolaylı olarak atmosfere saldığı toplam sera gazı miktarını
+              ifade eder. Bu gazlar genellikle karbondioksit (CO2) ve metan gibi
+              gazlardır. Günlük yaşamımızda kullandığımız enerji, taşıtlar,
+              tükettiğimiz ürünler ve atıklar karbon ayak izimizi etkiler.
+            </p>
+          </div>
+          <div class="col-md-6 text-center">
+            <img
+              src="./test-assets/carbon-footprint.png"
+              alt="Carbon Footprint Icon"
+              class="img-fluid rounded shadow"
+              style="max-height: 250px"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Bölüm: Karbon Ayak İzi Testi -->
+      <section id="test" class="mb-5">
+        <h2 class="playwrite-de-grund mb-4">Karbon Ayak İzi Testi</h2>
+        <form id="carbonForm">
+          <div class="mb-3">
+            <label for="carKm" class="form-label"
+              >Haftada kaç kilometre araba kullanıyorsunuz?</label
+            >
+            <input
+              type="number"
+              id="carKm"
+              class="form-control"
+              min="0"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="electricity" class="form-label"
+              >Aylık elektrik tüketiminiz kaç kWh?</label
+            >
+            <input
+              type="number"
+              id="electricity"
+              class="form-control"
+              min="0"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="meat" class="form-label"
+              >Haftada kaç gün et tüketiyorsunuz?</label
+            >
+            <select id="meat" class="form-select" required>
+              <option value="" disabled selected>Seçiniz</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3 ve üzeri</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Hesapla</button>
+        </form>
+
+        <div id="result" class="mt-4 roboto-condensed-16px"></div>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Basit karbon ayak izi hesaplama örneği
+      document
+        .getElementById("carbonForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const carKm = Number(document.getElementById("carKm").value);
+          const electricity = Number(
+            document.getElementById("electricity").value
+          );
+          const meat = Number(document.getElementById("meat").value);
+
+          // Basit katsayılarla tahmini hesaplama (örnek değerler)
+          const carEmissions = carKm * 0.21; // kg CO2 per km
+          const electricityEmissions = electricity * 0.5; // kg CO2 per kWh
+          let meatEmissions = 0;
+          if (meat === 1) meatEmissions = 20;
+          else if (meat === 2) meatEmissions = 35;
+          else if (meat === 3) meatEmissions = 50;
+
+          const totalEmissions =
+            carEmissions + electricityEmissions + meatEmissions;
+
+          const resultDiv = document.getElementById("result");
+          resultDiv.innerHTML = `<strong>Tahmini Karbon Ayak İzin:</strong> ${totalEmissions.toFixed(
+            2
+          )} kg CO₂ / ay`;
+        });
+    </script>
+  </body>
+</html>
