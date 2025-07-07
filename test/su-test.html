@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Su Ayak İzi Testi</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="su-test.css" />
+  </head>
+
+  <body class="bg-dark text-light">
+    <!-- NAVBAR BAŞLANGIÇ -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand position-relative mx-5" href="/index.html">
+          <img id="logo" src="/assets/logo.png" alt="Logo" />
+          <span class="text-light logo-back-text playwrite-de-grund"
+            >BluePlanet</span
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#gundem">Gündem</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#cozumler"
+                >Çözüm Önerileri</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#test"
+                id="izTestDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                İz Testi
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="izTestDropdown">
+                <li>
+                  <a
+                    class="dropdown-item nav-link"
+                    href="/test/karbon-test.html"
+                    >Karbon Ayak İzi Testi</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item nav-link active"
+                    href="/test/su-test.html"
+                    >Su İzi Testi</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#veriler">Veriler</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link child-special" href="/index.html#cocuklar"
+                >Çocuklara Özel</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#biz-kimiz">Biz Kimiz?</a>
+            </li>
+          </ul>
+
+          <div
+            class="d-flex ms-auto p-1 m-0 contact-icon align-items-center justify-content-center"
+          >
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring delay"></div>
+            <img
+              src="/assets/contact_support_52dp_FFF_FILL0_wght400_GRAD0_opsz48.png"
+              alt="Destek"
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBAR BİTİŞ -->
+
+    <main class="container py-5 mt-5">
+      <h1 class="mb-4 playwrite-de-grund">Su Ayak İzi Nedir?</h1>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="roboto-condensed-16px">
+            Su ayak izi, bireylerin veya kuruluşların doğrudan ve dolaylı olarak
+            kullandıkları su miktarının bir ölçüsüdür. Günlük hayatımızdaki su
+            tüketimini, ürünlerin üretiminde kullanılan suyu da dikkate alarak
+            hesaplar.
+          </p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img
+            src="./test-assets/pngwing.com.png"
+            alt="Su Ayak İzi Görseli"
+            class="img-fluid rounded shadow"
+            style="max-height: 250px"
+          />
+        </div>
+      </div>
+
+      <section class="my-5">
+        <h2>Su Ayak İzi Hesaplama</h2>
+
+        <form id="waterFootprintForm" class="mb-3">
+          <div class="mb-3">
+            <label for="dailyWaterUsage" class="form-label"
+              >Günlük su tüketiminiz (litre olarak):</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="dailyWaterUsage"
+              min="0"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary">Hesapla</button>
+        </form>
+
+        <div
+          id="result"
+          class="alert alert-info d-none roboto-condensed-16px"
+        ></div>
+      </section>
+    </main>
+
+    <script>
+      const form = document.getElementById("waterFootprintForm");
+      const resultDiv = document.getElementById("result");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const dailyUsage = Number(
+          document.getElementById("dailyWaterUsage").value
+        );
+
+        if (dailyUsage >= 0) {
+          const annualUsage = dailyUsage * 365;
+          resultDiv.textContent = `Tahmini yıllık su ayak iziniz yaklaşık ${annualUsage.toLocaleString()} litredir.`;
+          resultDiv.classList.remove("d-none");
+        } else {
+          resultDiv.textContent = "Lütfen geçerli bir sayı giriniz.";
+          resultDiv.classList.remove("d-none");
+        }
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

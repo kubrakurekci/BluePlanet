@@ -1,25 +1,49 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const scrollNext = document.querySelector(".scroll-next");
-    const scrollPrev = document.querySelector(".scroll-previous");
-    const gundemScroll = document.querySelector(".gundem-scroll");
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollContainer = document.querySelector(".gundem-scroll");
+  const scrollNext = document.querySelector(".scroll-next");
+  const scrollPrev = document.querySelector(".scroll-previous");
 
-    scrollNext.addEventListener("click", function() {
-        gundemScroll.scrollBy({ left: 300, behavior: "smooth" });
-    });
+  const originalCards = Array.from(scrollContainer.children);
 
-    scrollPrev.addEventListener("click", function() {
-        gundemScroll.scrollBy({ left: -300, behavior: "smooth" });
-    });
-});
-  window.addEventListener("scroll", () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = scrollTop / docHeight;
-    const scale = 0.1 + scrollPercent + 0.5;
-    document.querySelectorAll(".growingIcon").forEach((icon) => {
-      icon.style.transform = `scale(${scale})`;
-    });
+  // 1. Kartları başa ve sona kopyala
+  const prependClones = originalCards.map(card => {
+    const clone = card.cloneNode(true);
+    scrollContainer.insertBefore(clone, scrollContainer.firstChild);
+    return clone;
   });
+
+  const appendClones = originalCards.map(card => {
+    const clone = card.cloneNode(true);
+    scrollContainer.appendChild(clone);
+    return clone;
+  });
+
+  // 2. Scroll pozisyonunu orijinal kartların başına getir
+  const cardWidth = originalCards[0].offsetWidth + 16;
+  const originalSetWidth = originalCards.length * cardWidth;
+
+  scrollContainer.scrollLeft = originalSetWidth;
+
+  // 3. Sonsuz scroll efekti
+  scrollContainer.addEventListener("scroll", () => {
+    if (scrollContainer.scrollLeft <= 0) {
+      // En başa geldiyse: sona ışınla
+      scrollContainer.scrollLeft = originalSetWidth;
+    } else if (scrollContainer.scrollLeft >= originalSetWidth * 2) {
+      // En sona geldiyse: başa ışınla
+      scrollContainer.scrollLeft = originalSetWidth;
+    }
+  });
+
+  // 4. Ok tuşlarıyla kaydırma
+  scrollNext.addEventListener("click", () => {
+    scrollContainer.scrollBy({ left: cardWidth, behavior: "smooth" });
+  });
+
+  scrollPrev.addEventListener("click", () => {
+    scrollContainer.scrollBy({ left: -cardWidth, behavior: "smooth" });
+  });
+});
 
 function animateCircleFill() {
   const circleFill = document.querySelector('.first-crousel .circle-fill');
@@ -178,7 +202,7 @@ const wateringCan = document.getElementById('wateringCan');
 let offsetX = 0;
 let offsetY = 0;
 let dugSpots = [];
-let plantedSaplings = []; // sulanmayı bekleyen fidanlar
+let plantedSaplings = [];
 
 shovel.addEventListener('dragstart', (e) => {
   const rect = shovel.getBoundingClientRect();

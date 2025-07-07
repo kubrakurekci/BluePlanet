@@ -293,9 +293,6 @@ position: relative;
   flex-direction: column;
   overflow: visible;  
 }
-.btn-container>button{
-  border:none;
-}
 
 .gundem-card-title {
   position: relative;

@@ -1,0 +1,57 @@
+body {
+  /* Koyu yeşil tonlarda yatay gradyan */
+  background: linear-gradient(90deg, #064420 0%, #0b6a34 50%, #064420 100%);
+  color: #d4f1d4; /* Açık yeşil, okunabilir metin rengi */
+  min-height: 100vh;
+  margin-top: 80px;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Başlıklar için açık yeşil */
+h1,
+h2,
+h3 {
+  color: #a0d8a0;
+}
+
+/* Form elemanları */
+input,
+select,
+button {
+  border-radius: 6px;
+  border: 1.5px solid #4a8c4a;
+  background-color: #a8d5a8;
+  color: #0b3a0b;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  background-color: #8cc98c;
+  border-color: #2e7d32;
+  outline: none;
+}
+
+button.btn-primary {
+  background-color: #2e7d32;
+  border-color: #2e7d32;
+  color: #e6f2e6;
+}
+
+button.btn-primary:hover {
+  background-color: #1b4d1b;
+  border-color: #1b4d1b;
+  color: #d4f1d4;
+}
+
+/* Sonuç kutusu */
+#result {
+  background-color: #b7d8b7;
+  border: 1px solid #4a8c4a;
+  color: #0b3a0b;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(46, 125, 50, 0.4);
+  font-weight: 600;
+}
