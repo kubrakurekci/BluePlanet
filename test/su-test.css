@@ -1,0 +1,54 @@
+body {
+  /* Açık mavi tonlarda yatay gradyan */
+  background: linear-gradient(to bottom right, #003f5c, #2f4b7c);
+  color: blue; /* Koyu mavi okunabilir metin rengi */
+  min-height: 100vh; /* Sayfa yüksekliği boyunca arka plan */
+  margin-top: 80px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Başlıklar ve önemli metinler için koyu ton */
+h1,
+h2,
+h3 {
+  color: white;
+}
+
+/* Form elemanlarının arka planını ve kenarlıklarını hafif değiştir */
+input,
+select,
+button {
+  border-radius: 6px;
+  border: 1.5px solid #7fbfff;
+  background-color: #e0f0ff;
+  color: #034078;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  background-color: #c4e1ff;
+  border-color: #4a90e2;
+  outline: none;
+}
+
+button.btn-primary {
+  background-color: #3a85ff;
+  border-color: #3a85ff;
+}
+
+button.btn-primary:hover {
+  background-color: #2f6edc;
+  border-color: #2f6edc;
+}
+
+/* Sonuç kutusuna hafif gölge ve rahat okuma */
+#result {
+  background-color: #d4ecff;
+  border: 1px solid #7fbfff;
+  color: #034078;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(64, 132, 255, 0.3);
+  font-weight: 600;
+}

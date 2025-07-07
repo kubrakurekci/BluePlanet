@@ -10,9 +10,93 @@
     />
     <link rel="stylesheet" href="../style.css" />
     <!-- index.html ile aynı css dosyasını kullanıyoruz -->
+    <link rel="stylesheet" href="karbon-test.css" />
   </head>
 
   <body class="bg-dark text-light">
+    <!-- NAVBAR BAŞLANGIÇ -->
+    <nav class="navbar fixed-top navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand position-relative mx-5" href="/index.html">
+          <img id="logo" src="/assets/logo.png" alt="Logo" />
+          <span class="text-light logo-back-text playwrite-de-grund"
+            >BluePlanet</span
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#gundem">Gündem</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#cozumler"
+                >Çözüm Önerileri</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#test"
+                id="izTestDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                İz Testi
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="izTestDropdown">
+                <li>
+                  <a
+                    class="dropdown-item nav-link"
+                    href="/test/karbon-test.html"
+                    >Karbon Ayak İzi Testi</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item nav-link" href="/test/su-test.html"
+                    >Su İzi Testi</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#veriler">Veriler</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link child-special" href="/index.html#cocuklar"
+                >Çocuklara Özel</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#biz-kimiz">Biz Kimiz?</a>
+            </li>
+            <div
+              class="d-flex ms-auto p-1 m-0 contact-icon align-items-center justify-content-center"
+            >
+              <div class="pulse-ring"></div>
+              <div class="pulse-ring delay"></div>
+              <img
+                src="/assets/contact_support_52dp_FFF_FILL0_wght400_GRAD0_opsz48.png"
+                alt="Destek"
+              />
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBAR BİTİŞ -->
+
     <div class="container py-5">
       <!-- 1. Bölüm: Karbon Ayak İzi Nedir? -->
       <section id="info" class="mb-5">
@@ -28,10 +112,9 @@
             </p>
           </div>
           <div class="col-md-6 text-center">
-            <!-- Görsel için yer: buraya bir karbon ayak izi simgesi ya da doğa ile ilgili görsel koyabilirsin -->
             <img
-              src="./test-assets/gorse1.png"
-              alt="Karbon Ayak İzi Görseli"
+              src="./test-assets/carbon-footprint.png"
+              alt="Carbon Footprint Icon"
               class="img-fluid rounded shadow"
               style="max-height: 250px"
             />
@@ -86,61 +169,6 @@
         </form>
 
         <div id="result" class="mt-4 roboto-condensed-16px"></div>
-      </section>
-
-      <!-- 3. Bölüm: Azaltmak İçin Neler Yapabiliriz -->
-      <section id="tips">
-        <h2 class="playwrite-de-grund mb-4">
-          Karbon Ayak İzini Azaltmak İçin Neler Yapabiliriz?
-        </h2>
-
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <div
-              class="features card-bg save-energy p-3 h-100 text-light rounded shadow"
-            >
-              <div class="feature-icon fs-2 mb-3">
-                <i class="bi bi-lightbulb-fill"></i>
-              </div>
-              <h3 class="roboto-condensed-24px">Ampulleri LED ile değiştir</h3>
-              <p class="roboto-condensed-16px">
-                LED ampuller enerji tasarrufu sağlar ve karbon salımını azaltır.
-              </p>
-            </div>
-          </div>
-
-          <div class="col">
-            <div
-              class="features card-bg save-water p-3 h-100 text-light rounded shadow"
-            >
-              <div class="feature-icon fs-2 mb-3">
-                <i class="bi bi-droplet-fill"></i>
-              </div>
-              <h3 class="roboto-condensed-24px">Su tasarrufu yap</h3>
-              <p class="roboto-condensed-16px">
-                Bulaşıkları sudan geçirmeden makineye koymak gibi
-                alışkanlıklarla suyu koru.
-              </p>
-            </div>
-          </div>
-
-          <div class="col">
-            <div
-              class="features card-bg unplug-devices p-3 h-100 text-light rounded shadow"
-            >
-              <div class="feature-icon fs-2 mb-3">
-                <i class="bi bi-plug-fill"></i>
-              </div>
-              <h3 class="roboto-condensed-24px">
-                Kullanılmayan cihazları kapat
-              </h3>
-              <p class="roboto-condensed-16px">
-                Elektronik cihazları prizden çekerek enerji tasarrufu
-                sağlayabilirsin.
-              </p>
-            </div>
-          </div>
-        </div>
       </section>
     </div>
 
