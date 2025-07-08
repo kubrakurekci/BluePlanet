@@ -447,7 +447,7 @@ position: relative;
   transition: background-color 0.3s ease, transform 0.3s ease;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 300;
-  font-size: 8px;
+  font-size: 12px;
   text-decoration: none;
 }
 
@@ -571,7 +571,7 @@ margin: 8px;
   
   .btn-child{
     color: white;
-    padding: 16px;
+    padding: 8px 48px;
     border-radius: 8px;
     background-color: transparent;
     border: 2px solid white;
@@ -602,7 +602,6 @@ margin: 8px;
     min-height: 300px;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
 }
 
 .card-who::before {
