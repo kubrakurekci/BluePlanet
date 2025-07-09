@@ -158,8 +158,7 @@
 }
 .nav-link:active {
   color: #fff;
-.nav-link:active{
-  color: #fff ;
+
 }
 .nav-link.show{
   color: white !important;
@@ -170,8 +169,6 @@
 }
 .nav-link:visited {
   color: #fff;
-.nav-link:visited{
-  color: #fff ;
 }
 .nav-link:focus {
   color: #fff;
@@ -558,7 +555,6 @@
   width: 250px;
   justify-content: center;
 }
-.carousel-text {
 
 .test-buttons {
   gap: 2rem;
