@@ -9,12 +9,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../style.css" />
-    <!-- index.html ile aynı css dosyasını kullanıyoruz -->
     <link rel="stylesheet" href="karbon-test.css" />
   </head>
 
   <body class="bg-dark text-light">
-    <!-- NAVBAR BAŞLANGIÇ -->
     <nav class="navbar fixed-top navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand position-relative mx-5" href="/index.html">
@@ -95,10 +93,7 @@
         </div>
       </div>
     </nav>
-    <!-- NAVBAR BİTİŞ -->
-
     <div class="container py-5">
-      <!-- 1. Bölüm: Karbon Ayak İzi Nedir? -->
       <section id="info" class="mb-5">
         <h2 class="playwrite-de-grund">Karbon Ayak İzi Nedir?</h2>
         <div class="row align-items-center mt-4">
@@ -122,54 +117,99 @@
         </div>
       </section>
 
-      <!-- 2. Bölüm: Karbon Ayak İzi Testi -->
       <section id="test" class="mb-5">
         <h2 class="playwrite-de-grund mb-4">Karbon Ayak İzi Testi</h2>
-        <form id="carbonForm">
-          <div class="mb-3">
-            <label for="carKm" class="form-label"
-              >Haftada kaç kilometre araba kullanıyorsunuz?</label
-            >
-            <input
-              type="number"
-              id="carKm"
-              class="form-control"
-              min="0"
-              required
-            />
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <form id="carbonForm">
+                <div class="mb-3">
+                  <label for="carKm" class="form-label">
+                    Haftada kaç kilometre araba kullanıyorsunuz?
+                  </label>
+                  <input
+                    type="number"
+                    id="carKm"
+                    class="form-control"
+                    min="0"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="electricity" class="form-label">
+                    Aylık elektrik tüketiminiz kaç kWh?
+                  </label>
+                  <input
+                    type="number"
+                    id="electricity"
+                    class="form-control"
+                    min="0"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="meat" class="form-label">
+                    Haftada kaç gün et tüketiyorsunuz?
+                  </label>
+                  <select id="meat" class="form-select" required>
+                    <option value="" disabled selected>Seçiniz</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3 ve üzeri</option>
+                  </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Hesapla</button>
+              </form>
+
+              <div id="result" class="mt-4 roboto-condensed-16px"></div>
+            </div>
           </div>
-
-          <div class="mb-3">
-            <label for="electricity" class="form-label"
-              >Aylık elektrik tüketiminiz kaç kWh?</label
-            >
-            <input
-              type="number"
-              id="electricity"
-              class="form-control"
-              min="0"
-              required
-            />
-          </div>
-
-          <div class="mb-3">
-            <label for="meat" class="form-label"
-              >Haftada kaç gün et tüketiyorsunuz?</label
-            >
-            <select id="meat" class="form-select" required>
-              <option value="" disabled selected>Seçiniz</option>
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3 ve üzeri</option>
-            </select>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Hesapla</button>
-        </form>
-
-        <div id="result" class="mt-4 roboto-condensed-16px"></div>
+        </div>
       </section>
+    </div>
+
+    <div id="carbonFootprintPopup" class="popup-overlay">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h3 id="popupTitle"></h3>
+        <p id="popupMessage"></p>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="footer">
+      <footer class="py-3 m-0">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a href="/Haberler/gundem.html" class="nav-link px-2">Gündem</a>
+          </li>
+          <li class="nav-item">
+            <a href="#cozumler" class="nav-link px-2">Çözüm Önerileri</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2">İz Testi</a>
+          </li>
+          <li class="nav-item">
+            <a href="#veriler" class="nav-link px-2">Veriler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link child-special" href="/cocuklar-özel/cocuk.html"
+              >Çocuklara Özel</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#biz-kimiz" class="nav-link px-2">Biz Kimiz?</a>
+          </li>
+        </ul>
+        <p class="text-center roboto-condensed-16px text-light">
+          © 2025 <br />
+          W-Code 2.0 | Kodluyoruz & Gelecek Hayalim
+        </p>
+      </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
@@ -202,7 +242,64 @@
           resultDiv.innerHTML = `<strong>Tahmini Karbon Ayak İzin:</strong> ${totalEmissions.toFixed(
             2
           )} kg CO₂ / ay`;
+
+          // Pop-up'ı göster ve mesajı ayarla
+          showCarbonFootprintPopup(totalEmissions);
         });
+
+      function showCarbonFootprintPopup(totalEmissions) {
+        const popup = document.getElementById("carbonFootprintPopup");
+        const popupContent = document.querySelector(".popup-content"); // popup-content elementini seçin
+        const popupTitle = document.getElementById("popupTitle");
+        const popupMessage = document.getElementById("popupMessage");
+        const closeBtn = document.querySelector(".popup-overlay .close-btn");
+
+        // Örnek ortalama değer (Bu değeri kendi araştırmanıza göre ayarlayabilirsiniz)
+        // Türkiye ortalaması 2024 verilerine göre kişi başı yıllık karbon ayak izi yaklaşık 4-5 ton CO2 civarındadır.
+        // Aylık ortalama: 4500 kg / 12 ay = 375 kg CO2
+        const averageCarbonFootprint = 375; // kg CO2 / ay
+
+        let titleText = "Karbon Ayak İziniz";
+        let messageText = "";
+
+        // Her ihtimale karşı önceki sınıfları temizle
+        popupContent.classList.remove("warning");
+
+        if (totalEmissions <= averageCarbonFootprint * 0.8) {
+          messageText = `Aylık tahmini karbon ayak iziniz ${totalEmissions.toFixed(
+            2
+          )} kg CO₂. Bu, ortalamanın oldukça altında! Harika bir iş çıkarıyorsunuz! Gezegenimiz size minnettar.`;
+        } else if (
+          totalEmissions > averageCarbonFootprint * 0.8 &&
+          totalEmissions <= averageCarbonFootprint * 1.2
+        ) {
+          messageText = `Aylık tahmini karbon ayak iziniz ${totalEmissions.toFixed(
+            2
+          )} kg CO₂. Bu, ortalama seviyelerde. Karbon ayak izinizi daha da azaltmak için küçük adımlar atmayı düşünebilirsiniz.`;
+        } else {
+          // Ortalamanın üzerinde ise warning sınıfını ekle
+          popupContent.classList.add("warning");
+          messageText = `Aylık tahmini karbon ayak iziniz ${totalEmissions.toFixed(
+            2
+          )} kg CO₂. Bu, ortalamanın üzerinde. Karbon ayak izinizi azaltmak için atabileceğiniz bazı önemli adımlar olabilir. Daha sürdürülebilir seçimler yapmaya ne dersiniz?`;
+        }
+
+        popupTitle.textContent = titleText;
+        popupMessage.textContent = messageText;
+        popup.style.display = "flex"; // Pop-up'ı görünür yap
+
+        // Pop-up kapatma butonu
+        closeBtn.onclick = function () {
+          popup.style.display = "none";
+        };
+
+        // Pop-up dışına tıklayınca kapatma
+        window.onclick = function (event) {
+          if (event.target == popup) {
+            popup.style.display = "none";
+          }
+        };
+      }
     </script>
   </body>
 </html>
