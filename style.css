@@ -160,14 +160,17 @@
 margin: 4px;
 }
 .nav-link:active{
-  color: #fff;
+  color: #fff ;
+}
+.nav-link.show{
+  color: white !important;
 }
 .nav-link:hover{
   color: #332D56;
   background-color: #E3EEB2;
 }
 .nav-link:visited{
-  color: #fff;
+  color: #fff ;
 }
 .nav-link:focus{
   color: #fff;
@@ -387,13 +390,17 @@ position: relative;
 .gundem-card-description {
   padding: 12px 12px 16px;
 }
+.gundem{
+  background-color: #332D56;
+  padding: 56px 8px 16px 32px;
+}
 
 .gundem-card-description p {
   margin: 0;
   font-size: 14px;
 }
     #gundem > .container-fluid {
-        background-color: #fff;
+       background-color: rgba(255, 255, 255, 0.479);
         padding: 20px;
         border-radius: 0%;        
         margin:0;
@@ -542,6 +549,68 @@ margin: 8px;
   width: 250px;
   justify-content: center;
 }
+
+.test-buttons {
+  gap: 2rem;
+  align-items: stretch; /* Aynı hizada tutar */
+}
+
+.test-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Kapsayıcı eşit yükseklik */
+}
+
+.test-button {
+  width: 250px;
+  padding: 12px 32px;
+  border-radius: 8px;
+  background-color: #E3EEB2;
+  color: #332D56;
+  border: 2px solid #332D56;
+  font-weight: 500;
+  font-family: 'Roboto Condensed', sans-serif;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.button-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+}
+.water-button{
+  color: rgb(0, 132, 255);
+  background-color: transparent;
+  border: 1px solid rgb(0, 132, 255);
+  box-shadow: 4px 2px 8px 2px rgba(1, 8, 8, 0.7);
+}
+.water-button:hover{
+  color: rgb(0, 132, 255);
+  background-color: white;
+  border: 0;
+  box-shadow: 4px 2px 8px 2px rgba(1, 8, 8, 0.7);
+}
+.wind-button{
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+  box-shadow: 4px 2px 8px 2px rgba(1, 8, 8, 0.7);
+}
+.wind-button:hover{
+  color: white;
+  border: 0;
+  background-color: rgb(0, 208, 255);
+  box-shadow: 4px 2px 8px 2px rgba(1, 8, 8, 0.7);
+}
+
 .carousel-text{
   color: white;
 }
@@ -656,9 +725,6 @@ margin: 8px;
   height: auto;
   text-align: center;
   padding: 56px 8px 8px 8px;
-  
-  padding: 56px 8px 8px 8px;
-  
 }
 .game-area {
   display: flex;

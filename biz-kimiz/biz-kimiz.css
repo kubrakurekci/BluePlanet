@@ -196,6 +196,8 @@ position: relative;
   }
   .card{
     max-width: 540px;
+    background-color: white;
+    color: #332D56;
   }
   .hero-section {
   position: relative;
@@ -239,9 +241,43 @@ position: relative;
   object-fit: cover;
   border-radius: 50%;
 }
+
 .card .p-4 {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+@media (max-width: 700px) {
+  .icons {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 8px;
+    margin: 30px; 
+  }
+}
+.bi-who-icon{
+    display: flex;
+    padding:2px;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+  }
+  .bi-who-icon:hover{
+    background-color: #332D56;
+    color: white;
+  }
+  .text>.title{
+    background-color: #332D56;
+  color: white;
+  padding: 8px;
+  border-radius: 16px;
+  }
+  .text> .description{
+    background-color: rgb(44, 173, 44);
+    border-radius: 16px 0px;
+    padding: 4px;
+    color: white;
+  }
