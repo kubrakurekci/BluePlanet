@@ -426,3 +426,17 @@ function startGame() {
 
 // Başla butonuna tıklanınca oyunu başlat
 document.getElementById('startButton').addEventListener('click', startGame);
+
+
+  function playAnimation(button) {
+    const player = button.querySelector('dotlottie-player');
+    if (player) {
+      player.style.opacity = 1;
+      player.stop(); // önce durdur
+      player.play(); // sonra oynat
+      setTimeout(() => {
+        player.style.opacity = 0;
+      }, 1000); // animasyon süresi kadar sonra gizle (ms cinsinden)
+    }
+  }
+
