@@ -824,12 +824,7 @@ margin: 8px;
   align-items: center;
 }
 
-.faucet {
-  width: 100px;
-  height: 150px;
-  background: url('/cocuklar-özel/cocuklar_assets/opened-faucet.png') no-repeat center;
-  background-size: contain;
-}
+
 #game-area-water {
   display: flex;
   justify-content: center;
@@ -865,4 +860,41 @@ margin: 8px;
   background: url('/cocuklar-özel/cocuklar_assets/opened-faucet.png') no-repeat center;
   background-size: contain;
   position: relative;
+}
+.faucet.closed {
+  background-image: url('/cocuklar-özel/cocuklar_assets/closed-faucet.png');
+}
+#celebration2 {
+  display: none;
+  margin-top: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1000;
+}
+#startButton{
+  background-color: #FFFB00;
+  border: 1px solid white;
+  color: #332D56;
+  padding: 8px 32px ;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#startButton:hover{
+transform: scale(1.2);
+background-color: orange;
+color: white;
+}
+.startButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
