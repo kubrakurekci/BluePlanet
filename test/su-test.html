@@ -13,7 +13,6 @@
   </head>
 
   <body class="bg-dark text-light">
-    <!-- NAVBAR BAŞLANGIÇ -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand position-relative mx-5" href="/index.html">
@@ -27,13 +26,9 @@
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
@@ -51,22 +46,17 @@
                 id="izTestDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
-                aria-expanded="false"
               >
                 İz Testi
               </a>
-              <ul class="dropdown-menu" aria-labelledby="izTestDropdown">
+              <ul class="dropdown-menu">
                 <li>
-                  <a
-                    class="dropdown-item nav-link"
-                    href="/test/karbon-test.html"
+                  <a class="dropdown-item" href="/test/karbon-test.html"
                     >Karbon Ayak İzi Testi</a
                   >
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item nav-link active"
-                    href="/test/su-test.html"
+                  <a class="dropdown-item active" href="/test/su-test.html"
                     >Su İzi Testi</a
                   >
                 </li>
@@ -76,15 +66,12 @@
               <a class="nav-link" href="/index.html#veriler">Veriler</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link child-special" href="/index.html#cocuklar"
-                >Çocuklara Özel</a
-              >
+              <a class="nav-link" href="/index.html#cocuklar">Çocuklara Özel</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/index.html#biz-kimiz">Biz Kimiz?</a>
             </li>
           </ul>
-
           <div
             class="d-flex ms-auto p-1 m-0 contact-icon align-items-center justify-content-center"
           >
@@ -98,8 +85,6 @@
         </div>
       </div>
     </nav>
-    <!-- NAVBAR BİTİŞ -->
-
     <main class="container py-5 mt-5">
       <h1 class="mb-4 playwrite-de-grund">Su Ayak İzi Nedir?</h1>
       <div class="row align-items-center">
@@ -123,30 +108,166 @@
 
       <section class="my-5">
         <h2>Su Ayak İzi Hesaplama</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <form id="waterFootprintForm" class="mb-3">
+                <div class="mb-3">
+                  <label for="dailyWaterUsage" class="form-label"
+                    >Günlük su tüketiminiz (litre):</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="dailyWaterUsage"
+                    min="0"
+                    required
+                  />
+                </div>
 
-        <form id="waterFootprintForm" class="mb-3">
-          <div class="mb-3">
-            <label for="dailyWaterUsage" class="form-label"
-              >Günlük su tüketiminiz (litre olarak):</label
-            >
-            <input
-              type="number"
-              class="form-control"
-              id="dailyWaterUsage"
-              min="0"
-              required
-            />
+                <div class="mb-3">
+                  <label for="showersPerWeek" class="form-label"
+                    >Haftada kaç kez duş alıyorsunuz?</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="showersPerWeek"
+                    min="0"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="laundryPerWeek" class="form-label"
+                    >Haftada kaç kez çamaşır yıkıyorsunuz?</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="laundryPerWeek"
+                    min="0"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="fruitWash" class="form-label"
+                    >Sebze ve meyve yıkarken musluğu açık bırakıyor
+                    musunuz?</label
+                  >
+                  <select id="fruitWash" class="form-select" required>
+                    <option value="" disabled selected>Seçiniz</option>
+                    <option value="yes">Evet</option>
+                    <option value="no">Hayır</option>
+                  </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Hesapla</button>
+              </form>
+
+              <div
+                id="result"
+                class="alert alert-info d-none roboto-condensed-16px"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="my-5">
+        <h3 class="mt-4 mb-4">Bazı Ürünlerin Su Ayak İzi</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100 bg-secondary text-light shadow">
+              <div class="card-body text-center">
+                <h5 class="card-title">👕 Tişört</h5>
+                <p class="card-text">
+                  1 tişört üretimi için yaklaşık <strong>2.700 litre</strong> su
+                  harcanır.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <button type="submit" class="btn btn-primary">Hesapla</button>
-        </form>
+          <div class="col">
+            <div class="card h-100 bg-secondary text-light shadow">
+              <div class="card-body text-center">
+                <h5 class="card-title">👖 Jean Pantolon</h5>
+                <p class="card-text">
+                  1 jean üretimi için yaklaşık <strong>7.600 litre</strong> su
+                  gerekir.
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <div
-          id="result"
-          class="alert alert-info d-none roboto-condensed-16px"
-        ></div>
+          <div class="col">
+            <div class="card h-100 bg-secondary text-light shadow">
+              <div class="card-body text-center">
+                <h5 class="card-title">🥩 Et</h5>
+                <p class="card-text">
+                  1 kg et için yaklaşık <strong>15.000 litre</strong> su
+                  harcanır.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 bg-secondary text-light shadow">
+              <div class="card-body text-center">
+                <h5 class="card-title">🍫 Çikolata</h5>
+                <p class="card-text">
+                  1 kg çikolata üretimi için <strong>17.000 litre</strong> su
+                  gerekir.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="fst-italic roboto-condensed-16px text-muted mt-4">
+          *Veriler üretim sürecindeki ortalama su tüketimini temsil eder.
+        </p>
       </section>
     </main>
+
+    <div id="waterFootprintPopup" class="popup-overlay">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h3 id="popupWaterTitle"></h3>
+        <p id="popupWaterMessage"></p>
+      </div>
+    </div>
+    <div class="container-fluid" id="footer">
+      <footer class="py-3 m-0">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a href="/Haberler/gundem.html" class="nav-link px-2">Gündem</a>
+          </li>
+          <li class="nav-item">
+            <a href="#cozumler" class="nav-link px-2">Çözüm Önerileri</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2">İz Testi</a>
+          </li>
+          <li class="nav-item">
+            <a href="#veriler" class="nav-link px-2">Veriler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cocuklar-özel/cocuk.html"
+              >Çocuklara Özel</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#biz-kimiz" class="nav-link px-2">Biz Kimiz?</a>
+          </li>
+        </ul>
+        <p class="text-center roboto-condensed-16px text-light">
+          © 2025 <br />W-Code 2.0 | Kodluyoruz & Gelecek Hayalim
+        </p>
+      </footer>
+    </div>
 
     <script>
       const form = document.getElementById("waterFootprintForm");
@@ -154,19 +275,85 @@
 
       form.addEventListener("submit", function (event) {
         event.preventDefault();
+
         const dailyUsage = Number(
           document.getElementById("dailyWaterUsage").value
         );
+        const showersPerWeek = Number(
+          document.getElementById("showersPerWeek").value
+        );
+        const laundryPerWeek = Number(
+          document.getElementById("laundryPerWeek").value
+        );
+        const fruitWash = document.getElementById("fruitWash").value;
 
-        if (dailyUsage >= 0) {
-          const annualUsage = dailyUsage * 365;
-          resultDiv.textContent = `Tahmini yıllık su ayak iziniz yaklaşık ${annualUsage.toLocaleString()} litredir.`;
-          resultDiv.classList.remove("d-none");
-        } else {
-          resultDiv.textContent = "Lütfen geçerli bir sayı giriniz.";
-          resultDiv.classList.remove("d-none");
-        }
+        const showerPerUse = 50; // Ortalama bir duş 50 litre
+        const laundryPerUse = 70; // Ortalama bir çamaşır yıkama 70 litre
+        const fruitWashLiters = fruitWash === "yes" ? 20 : 5; // Meyve yıkamada açık musluk 20L, kapalı 5L (tahmini)
+
+        // Haftalık ve yıllık hesaplamaları toplayalım
+        const annualUsage =
+          dailyUsage * 365 + // Yıllık günlük kullanım
+          showersPerWeek * showerPerUse * 52 + // Yıllık duş kullanımı
+          laundryPerWeek * laundryPerUse * 52 + // Yıllık çamaşır kullanımı
+          fruitWashLiters * 365; // Yıllık meyve yıkama
+
+        resultDiv.textContent = `Tahmini yıllık su ayak iziniz: ${annualUsage.toLocaleString()} litre.`;
+        resultDiv.classList.remove("d-none");
+
+        // Pop-up'ı göster ve mesajı ayarla
+        showWaterFootprintPopup(annualUsage);
       });
+
+      function showWaterFootprintPopup(totalWaterFootprint) {
+        const popup = document.getElementById("waterFootprintPopup");
+        const popupContent = document.querySelector(
+          "#waterFootprintPopup .popup-content"
+        );
+        const popupTitle = document.getElementById("popupWaterTitle");
+        const popupMessage = document.getElementById("popupWaterMessage");
+        const closeBtn = document.querySelector(
+          "#waterFootprintPopup .close-btn"
+        );
+
+        // Türkiye'de kişi başı yıllık toplam su ayak izi ortalaması (örnek değer)
+        // Gerçek ve güncel veri araştırması yapılması önemlidir.
+        // Küresel ortalama su ayak izi (doğrudan + dolaylı) kişi başı yıllık 1240 metreküp (1.240.000 litre) civarında olabilir.
+        // Türkiye için net bir rakam bulmak zor olabilir, bu bir tahmin:
+        const averageAnnualWaterFootprint = 1500000; // Yıllık 1.500.000 litre (1500 m³)
+
+        let titleText = "Su Ayak İziniz";
+        let messageText = "";
+
+        // Önceki durumdan kalma tüm renk sınıflarını temizle
+        popupContent.classList.remove("good", "warning"); // Sadece good ve warning kalsın
+
+        if (totalWaterFootprint <= averageAnnualWaterFootprint) {
+          // Ortalamaya eşit veya altındaysa (iyi/ortalama)
+          popupContent.classList.add("good"); // Mavi tonunu temsil etmesi için "good" kullanıyoruz
+          messageText = `Yıllık tahmini su ayak iziniz ${totalWaterFootprint.toLocaleString()} litre. Bu, ortalama veya ortalamanın altında! Su kaynaklarımızı koruma çabalarınız için teşekkür ederiz.`;
+        } else {
+          // Ortalamanın üzerindeyse (kötü)
+          popupContent.classList.add("warning"); // Kırmızı tonunu temsil etmesi için "warning" kullanıyoruz
+          messageText = `Yıllık tahmini su ayak iziniz ${totalWaterFootprint.toLocaleString()} litre. Bu, ortalamanın oldukça üzerinde. Su kaynaklarımızı korumak için bazı yaşam tarzı değişiklikleri yapmayı düşünebilirsiniz.`;
+        }
+
+        popupTitle.textContent = titleText;
+        popupMessage.textContent = messageText;
+        popup.style.display = "flex"; // Pop-up'ı görünür yap
+
+        // Pop-up kapatma butonu
+        closeBtn.onclick = function () {
+          popup.style.display = "none";
+        };
+
+        // Pop-up dışına tıklayınca kapatma
+        window.onclick = function (event) {
+          if (event.target == popup) {
+            popup.style.display = "none";
+          }
+        };
+      }
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,7 +1,6 @@
-*{
-    margin: 0;
-    padding: 0;
-    
+* {
+  margin: 0;
+  padding: 0;
 }
 #bg-video {
   position: fixed;
@@ -17,8 +16,8 @@
   bottom: 30px;
   right: 30px;
   z-index: 999;
-  background-color: #E3EEB2;
-  color: #332D56;
+  background-color: #e3eeb2;
+  color: #332d56;
   border: none;
   padding: 12px 16px;
   border-radius: 50%;
@@ -26,15 +25,14 @@
   height: 50px;
   font-size: 24px;
   cursor: pointer;
-  display: none; 
+  display: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
   transition: opacity 0.3s;
 }
-.bi-chevron-up{
+.bi-chevron-up {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 #scrollToTopBtn:hover {
@@ -46,8 +44,8 @@
   bottom: 30px;
   right: 30px;
   z-index: 999;
-  background-color: #E3EEB2;
-  color: #332D56;
+  background-color: #e3eeb2;
+  color: #332d56;
   border: none;
   padding: 12px 16px;
   border-radius: 50%;
@@ -55,15 +53,14 @@
   height: 50px;
   font-size: 24px;
   cursor: pointer;
-  display: none; 
+  display: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
   transition: opacity 0.3s;
 }
-.bi-chevron-up{
+.bi-chevron-up {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 #scrollToTopBtn:hover {
@@ -135,81 +132,81 @@
 }
 
 #logo {
-    width:50px;
-    position: relative;
-    z-index:1;
-    color: rgb(0, 68, 255);
+  width: 50px;
+  position: relative;
+  z-index: 1;
+  color: rgb(0, 68, 255);
 }
-.navbar{
+.navbar {
   background-color: #332d56e8;
 }
-.navbar-toggler{
+.navbar-toggler {
   border: 2px solid white;
   color: white;
 }
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-.nav-link{
+.nav-link {
   color: white;
-   display: inline-block;
+  display: inline-block;
   padding: 8px 16px;
   display: inline-block;
   border-radius: 8px;
   justify-content: center;
-margin: 4px;
+  margin: 4px;
 }
-.nav-link:active{
+.nav-link:active {
   color: #fff;
 }
-.nav-link:hover{
-  color: #332D56;
-  background-color: #E3EEB2;
+.nav-link:hover {
+  color: #332d56;
+  background-color: #e3eeb2;
 }
-.nav-link:visited{
+.nav-link:visited {
   color: #fff;
 }
-.nav-link:focus{
+.nav-link:focus {
   color: #fff;
 }
-.navbar-collapse{
+.navbar-collapse {
   flex-grow: 0;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.navbar-nav{
+.navbar-nav {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.dropdown-menu{
-  background-color: #332D56;
+.dropdown-menu {
+  background-color: #332d56;
   border: none;
   padding: 8px;
 }
-.dropdown-menu:active{
+.dropdown-menu:active {
   color: #fff;
 }
-.dropdown-item{
+.dropdown-item {
   margin-right: 4px;
 }
 .logo-back-text {
   position: absolute;
-  top: 50%;   
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
   font-weight: regular;
-  color: rgba(255, 255, 255, 0.1); 
+  color: rgba(255, 255, 255, 0.1);
   white-space: nowrap;
-  z-index: 2; 
-  user-select: none; 
-  pointer-events: none; 
+  z-index: 2;
+  user-select: none;
+  pointer-events: none;
   font-size: 1rem;
 }
 
 .contact-icon {
-position: relative;
+  position: relative;
   display: flex;
   align-items: center;
   width: 50px;
@@ -225,9 +222,9 @@ position: relative;
   width: 60%;
   height: 60%;
   object-fit: contain;
-  z-index: 2 ;
+  z-index: 2;
   pointer-events: none;
-  margin: 0; 
+  margin: 0;
 }
 
 .pulse-ring {
@@ -235,7 +232,7 @@ position: relative;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #E3EEB2;
+  background-color: #e3eeb2;
   animation: pulse 2s infinite ease-in-out;
   z-index: 0;
   opacity: 0.6;
@@ -245,8 +242,7 @@ position: relative;
   z-index: 0;
   width: 80%;
   height: 80%;
-  background-color: #71C0BB;
-
+  background-color: #71c0bb;
 }
 @keyframes pulse {
   0% {
@@ -264,7 +260,7 @@ position: relative;
 }
 
 .child-special {
-  background: linear-gradient(45deg, #78BBFF, #D11FF5, #FF78FD, #FFFB00);
+  background: linear-gradient(45deg, #78bbff, #d11ff5, #ff78fd, #fffb00);
   background-size: 300% 300%;
   animation: gradientMove 6s ease infinite;
   padding: 8px 16px;
@@ -297,83 +293,81 @@ position: relative;
   font-style: normal;
 }
 .roboto-condensed-48px {
-      font-family: 'Roboto Condensed', sans-serif;
-      font-weight: 400;
-      font-size: 48px;
-    }
-    .roboto-condensed-24px {
-      font-family: 'Roboto Condensed', sans-serif;
-      font-weight: 400;
-      font-size: 24px;
-    }
-    .roboto-condensed-16px {
-      font-family: 'Roboto Condensed', sans-serif;
-      font-weight:100;
-      font-size: 16px;
-    }
-    .roboto-condensed-8px {
-      font-family: 'Roboto Condensed', sans-serif;
-      font-weight: 400;
-      font-size: 8px;
-    }
-    .roboto-condensed-btn{
-      font-family: 'Roboto Condensed', sans-serif;
-      font-weight: 300px;
-      font-size: 8px;
-      border: 0px;
-    }
-    .empty-div {
-      width: 100%;
-      height: 100vh;
-      margin-bottom: 20px;
-      margin-top: 200px;
-    }
- 
- .gundem-scroll {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+}
+.roboto-condensed-24px {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+.roboto-condensed-16px {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+}
+.roboto-condensed-8px {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 8px;
+}
+.roboto-condensed-btn {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300px;
+  font-size: 8px;
+  border: 0px;
+}
+.empty-div {
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 20px;
+  margin-top: 200px;
+}
+
+.gundem-scroll {
   display: flex;
   overflow-x: auto;
   gap: 16px;
-  scroll-behavior: auto; 
+  scroll-behavior: auto;
   scrollbar-width: none;
 }
 .gundem-scroll::-webkit-scrollbar {
   display: none;
-  scroll-behavior: auto; 
+  scroll-behavior: auto;
   scrollbar-width: none;
 }
 .gundem-scroll::-webkit-scrollbar {
   display: none;
 }
-
-
 
 .gundem-card {
   flex-shrink: 0;
   width: 250px;
-  background-color: #4E6688;
+  background-color: #4e6688;
   border-radius: 16px;
   padding: 0;
   color: white;
   display: flex;
   flex-direction: column;
-  overflow: visible;  
+  overflow: visible;
 }
 
 .gundem-card-title {
   position: relative;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.1); 
-  border-radius: 0 16px 0 16px; 
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0 16px 0 16px;
   padding: 12px;
 }
 .gundem-card-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   right: 0;
   width: 32px;
   height: 32px;
-  background: #4E6688; 
+  background: #4e6688;
   clip-path: polygon(0 0, 100% 0, 100% 100%);
   transform: rotate(360deg);
   border-bottom-left-radius: 8px;
@@ -392,70 +386,71 @@ position: relative;
   margin: 0;
   font-size: 14px;
 }
-    #gundem > .container-fluid {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 0%;        
-        margin:0;
-        position: relative;
-        border: none;
-        overflow: hidden;
+#gundem > .container-fluid {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 0%;
+  margin: 0;
+  position: relative;
+  border: none;
+  overflow: hidden;
+}
 
-    }
-
-
-    .scroll-next, .scroll-previous {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: #E3EEB2;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      z-index: 10;
-      transition: background-color 0.3s ease;
-    }
-    .scroll-next {
-      right: 10px;
-    }
-    .scroll-previous {
-      left: 10px;
-    }
-    .scroll-next:hover, .scroll-previous:hover {
-  background-color: #E3EEB2;
+.scroll-next,
+.scroll-previous {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e3eeb2;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+.scroll-next {
+  right: 10px;
+}
+.scroll-previous {
+  left: 10px;
+}
+.scroll-next:hover,
+.scroll-previous:hover {
+  background-color: #e3eeb2;
   box-shadow: 0 0 8px 2px rgba(2, 52, 49, 0.7);
 }
-    .scroll-next i, .scroll-previous i {
-      font-size: 1.5rem;
-      color: #332D56;
-    }
+.scroll-next i,
+.scroll-previous i {
+  font-size: 1.5rem;
+  color: #332d56;
+}
 
 .btn {
   display: inline-block;
   background-color: #fff;
-  color: #332D56;
-  border: 2px solid #332D56;
+  color: #332d56;
+  border: 2px solid #332d56;
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 300;
   font-size: 12px;
   text-decoration: none;
 }
 
 .btn:hover {
-  background-color: #332D56;
+  background-color: #332d56;
   color: #fff;
   transform: scale(1.05);
-  border: 1px solid #332D56;
+  border: 1px solid #332d56;
 }
 
 .btn-container {
@@ -464,7 +459,7 @@ position: relative;
   margin-top: 20px;
 }
 #cozumler {
-  background-color: #332D56;
+  background-color: #332d56;
 }
 .card-bg {
   position: relative;
@@ -482,22 +477,22 @@ position: relative;
   z-index: -1;
 }
 .save-water::before {
-  background-image: url( /assets/dishes-to-the-machine.png);
+  background-image: url(/assets/dishes-to-the-machine.png);
 }
 .save-energy::before {
-  background-image: url( /assets/lightbulbs.png);
+  background-image: url(/assets/lightbulbs.png);
 }
 .save-bath-water::before {
-  background-image: url( /assets/taking-a-bath.png);
+  background-image: url(/assets/taking-a-bath.png);
 }
 .unplug-devices::before {
-  background-image: url( /assets/electronic-devices.png);
+  background-image: url(/assets/electronic-devices.png);
 }
 .wash-at-30::before {
-  background-image: url( /assets/washing-machine.png);
+  background-image: url(/assets/washing-machine.png);
 }
 .no-meat-day::before {
-  background-image: url( /assets/vegeterian.png);
+  background-image: url(/assets/vegeterian.png);
 }
 .features {
   padding: 16px;
@@ -507,9 +502,9 @@ position: relative;
   box-shadow: 0 0 8px 2px rgba(124, 141, 140, 0.7);
   display: flex;
   flex-direction: column;
- height: 300px !important;
+  height: 300px !important;
 }
-.bi-droplet-fill{
+.bi-droplet-fill {
   color: aqua;
 }
 .bi-lightbulb-fill {
@@ -518,9 +513,9 @@ position: relative;
 .fa-bath {
   color: #9900f1;
   font-size: 1.8rem;
-margin: 8px;
+  margin: 8px;
 }
-.fa-plug{
+.fa-plug {
   color: #fff;
   font-size: 1.8rem;
   margin: 8px;
@@ -530,26 +525,33 @@ margin: 8px;
   font-size: 1.8rem;
 }
 .bi-fork-knife {
-  color:cadetblue;
+  color: cadetblue;
   font-size: 1.8rem;
 }
 .growingIcon {
   transform: scale(0);
   transition: transform 0.3s ease;
 }
-.btn-sm{
+.btn-sm {
   display: flex;
   width: 250px;
   justify-content: center;
 }
-.carousel-text{
+.carousel-text {
   color: white;
 }
-.carousel{
+.carousel {
   background-color: #4e6688e7;
 }
-.children-special-page{
- background: linear-gradient(45deg, #FFFB00,#78BBFF, #D11FF5, #FF78FD,#FFFB00);
+.children-special-page {
+  background: linear-gradient(
+    45deg,
+    #fffb00,
+    #78bbff,
+    #d11ff5,
+    #ff78fd,
+    #fffb00
+  );
   background-size: 300% 300%;
   animation: gradientChild 6s ease-in-out infinite;
   text-align: center;
@@ -567,45 +569,46 @@ margin: 8px;
   }
   100% {
     background-position: 0% 50%;
-  }}
-  
-  .btn-child{
-    color: white;
-    padding: 8px 48px;
-    border-radius: 8px;
-    background-color: transparent;
-    border: 2px solid white;
   }
-  .btn-child:hover{
-    color: #4e4870;
-    background-color: #fffc4d;
-   box-shadow: 4px 2px 8px 2px rgba(1, 8, 8, 0.7);
-  }
-  #biz-kimiz{
-   background-color: #332D56;
-  }
-  .bi-who-icon{
-     display: flex;
-    padding:1px;
-    width: 24px;
-    height: 24px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-  }
-  .bi-who-icon:hover{
-    background-color: white;
-    color: black;
-  }
- 
-  .card-who {
-    min-height: 300px;
+}
+
+.btn-child {
+  color: white;
+  padding: 8px 48px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 2px solid white;
+}
+.btn-child:hover {
+  color: #4e4870;
+  background-color: #fffc4d;
+  box-shadow: 4px 2px 8px 2px rgba(1, 8, 8, 0.7);
+}
+#biz-kimiz {
+  background-color: #332d56;
+}
+.bi-who-icon {
+  display: flex;
+  padding: 1px;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.bi-who-icon:hover {
+  background-color: white;
+  color: black;
+}
+
+.card-who {
+  min-height: 300px;
   position: relative;
   overflow: hidden;
 }
 
 .card-who::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   left: -50%;
@@ -622,8 +625,8 @@ margin: 8px;
   transition: transform 0.7s ease;
   opacity: 0;
 }
-.about-card{
-  background-color: #332D56;
+.about-card {
+  background-color: #332d56;
   border-radius: 8px;
   padding: 8px;
   display: inline-block;
@@ -636,29 +639,30 @@ margin: 8px;
   transition: transform 0.7s ease, opacity 0.3s ease;
 }
 
-  #footer{
-     background-color: #332d56e8;
-  }
+#footer {
+  background-color: #332d56e8;
+}
 
 .oyunBir {
   position: relative;
-  background-image:
-    linear-gradient(rgba(51, 45, 86, 0.778), rgba(51, 45, 86, 0.773)),
-    url('/cocuklar-özel/cocuklar_assets/garbage-dump-in-front-of-the-house.jpg');
+  background-image: linear-gradient(
+      rgba(51, 45, 86, 0.778),
+      rgba(51, 45, 86, 0.773)
+    ),
+    url("/cocuklar-özel/cocuklar_assets/garbage-dump-in-front-of-the-house.jpg");
   background-size: cover;
   background-position: center;
   padding: 24px;
 }
-.game-description{
-  background-color: #332D56;
+.game-description {
+  background-color: #332d56;
   background-size: cover;
   height: auto;
   height: auto;
   text-align: center;
   padding: 56px 8px 8px 8px;
-  
+
   padding: 56px 8px 8px 8px;
-  
 }
 .game-area {
   display: flex;
@@ -668,18 +672,17 @@ margin: 8px;
   text-align: center;
 }
 #celebration {
-  display: none; 
-  position: fixed; 
-  top: 50%;         
-  left: 50%;        
-  transform: translate(-50%, -50%); 
-  z-index: 9999;    
-  background: rgba(255, 255, 255, 0.8); 
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
-
 
 .bin {
   position: relative;
@@ -690,8 +693,8 @@ margin: 8px;
   background-color: #e3eeb2c5;
   overflow: hidden;
 }
-.bin:hover{
-  box-shadow:0 0 15px rgba(0,0,0,0.3); 
+.bin:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   background-color: #6f66a2;
 }
 
@@ -730,8 +733,8 @@ margin: 8px;
   height: 500px;
   background-image: url(/cocuklar-özel/cocuklar_assets/Ekran\ görüntüsü\ 2025-07-03\ 153635.png);
   overflow: hidden;
-   background-size:cover;     
-  background-position: center; 
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 #ground {
@@ -739,9 +742,9 @@ margin: 8px;
   bottom: 0;
   width: 100%;
   height: 100px;
-  background-image: url('/cocuklar-özel/cocuklar_assets/ground.png');
-  background-size: cover;     
-  background-position: center; 
+  background-image: url("/cocuklar-özel/cocuklar_assets/ground.png");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -753,7 +756,7 @@ margin: 8px;
   cursor: grab;
   z-index: 10;
 }
-#shovel:hover{
+#shovel:hover {
   background: linear-gradient(rgba(78, 86, 45, 0.778), rgba(75, 86, 45, 0.773));
   border-radius: 24px;
 }
@@ -766,7 +769,7 @@ margin: 8px;
   cursor: grab;
   z-index: 10;
 }
-#saplingIcon:hover{
+#saplingIcon:hover {
   background: linear-gradient(rgba(78, 86, 45, 0.778), rgba(75, 86, 45, 0.773));
   border-radius: 24px;
 }
@@ -778,19 +781,25 @@ margin: 8px;
   transition: transform 2s ease-in-out;
   transform-origin: bottom center;
 }
-#wateringCan{
+#wateringCan {
   width: 60px;
-    position: absolute;
-    bottom: 20px;
+  position: absolute;
+  bottom: 20px;
   left: 200px;
 }
-#wateringCan:hover{
+#wateringCan:hover {
   background: linear-gradient(rgba(78, 86, 45, 0.778), rgba(75, 86, 45, 0.773));
   border-radius: 24px;
 }
 @keyframes splash {
-  0% { transform: scale(0); opacity: 0.8; }
-  100% { transform: scale(3); opacity: 0; }
+  0% {
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
 }
 
 /* Oyun alanı: musluklar burada */
@@ -798,13 +807,12 @@ margin: 8px;
   display: flex;
   justify-content: center;
   gap: 50px;
-  
 }
-.game-area-bg{
+.game-area-bg {
   background-image: url(/cocuklar-özel/cocuklar_assets/sink.png);
   padding: 24px;
 }
-.score-area{
+.score-area {
   padding: 16px;
   align-items: center;
   justify-content: center;
@@ -813,10 +821,10 @@ margin: 8px;
   height: auto;
   border-radius: 16px;
   color: white;
-    margin: 16px auto; 
+  margin: 16px auto;
   text-align: center;
 }
-.water-game{
+.water-game {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -826,20 +834,20 @@ margin: 8px;
 .faucet {
   width: 100px;
   height: 150px;
-  background: url('/cocuklar-özel/cocuklar_assets/opened-faucet.png') no-repeat center;
+  background: url("/cocuklar-özel/cocuklar_assets/opened-faucet.png") no-repeat
+    center;
   background-size: contain;
 }
 #game-area-water {
   display: flex;
   justify-content: center;
   gap: 50px;
-  
 }
-.game-area-bg{
+.game-area-bg {
   background-image: url(/cocuklar-özel/cocuklar_assets/sink.png);
   padding: 24px;
 }
-.score-area{
+.score-area {
   padding: 16px;
   align-items: center;
   justify-content: center;
@@ -848,10 +856,10 @@ margin: 8px;
   height: auto;
   border-radius: 16px;
   color: white;
-    margin: 16px auto; 
+  margin: 16px auto;
   text-align: center;
 }
-.water-game{
+.water-game {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -861,21 +869,20 @@ margin: 8px;
 .faucet {
   width: 100px;
   height: 150px;
-  background: url('/cocuklar-özel/cocuklar_assets/opened-faucet.png') no-repeat center;
+  background: url("/cocuklar-özel/cocuklar_assets/opened-faucet.png") no-repeat
+    center;
   background-size: contain;
   position: relative;
 }
 
-
-
 .faucet.closed {
-  background-image: url('/cocuklar-özel/cocuklar_assets/closed-faucet.png');
+  background-image: url("/cocuklar-özel/cocuklar_assets/closed-faucet.png");
 }
 
 #celebration2 {
   display: none;
   margin-top: 20px;
-  position: fixed; 
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -885,26 +892,24 @@ margin: 8px;
   text-align: center;
   z-index: 1000;
 }
-#startButton{
-  background-color: #FFFB00;
+#startButton {
+  background-color: #fffb00;
   border: 1px solid white;
-  color: #332D56;
-  padding: 8px 32px ;
+  color: #332d56;
+  padding: 8px 32px;
   border-radius: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#startButton:hover{
-transform: scale(1.2);
-background-color: orange;
-color: white;
+#startButton:hover {
+  transform: scale(1.2);
+  background-color: orange;
+  color: white;
 }
-.startButton{
+.startButton {
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-
-
