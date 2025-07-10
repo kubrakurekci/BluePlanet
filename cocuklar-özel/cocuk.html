@@ -28,10 +28,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#gundem">Gündem</a>
+            <a class="nav-link" href="/Haberler/gundem.html">Gündem</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#cozumler">Çözüm Önerileri</a>
+            <a class="nav-link" href="/index.html#cozumler">Çözüm Önerileri</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="izTestDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -39,23 +39,23 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="izTestDropdown">
               <li>
-                <a class="dropdown-item nav-link" href="#test1">Karbon Ayak İzi Testi</a>
+                <a class="dropdown-item nav-link" href="/test/karbon-test.html">Karbon Ayak İzi Testi</a>
               </li>
               <li>
-                <a class="dropdown-item nav-link" href="#test2">Su İzi Testi</a>
+                <a class="dropdown-item nav-link" href="/test/su-test.html">Su İzi Testi</a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#veriler">Veriler</a>
+            <a class="nav-link" href="/index.html#veriler">Veriler</a>
           </li>
           <li class="nav-item">
             <a class="nav-link child-special" href="/cocuklar-özel/cocuk.html">Çocuklara Özel</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.hmtl#biz-kimiz">Biz Kimiz?</a>
+            <a class="nav-link" href="/biz-kimiz/biz-kimiz.html">Biz Kimiz?</a>
           </li>
-          <a href="iletisim.html" style="text-decoration: none;">
+          <a href="/Contact/contact.html" style="text-decoration: none;">
             <div class="d-flex ms-auto p-1 m-0 contact-icon align-items-center justify-content-center">
               <div class="pulse-ring"></div>
               <div class="pulse-ring delay"></div>
@@ -67,22 +67,36 @@
     </div>
   </nav>
   <!--Çocuklara Özel İçerik-->
-  <div class="p-5 text-center children-special-page">
-    <div class="container py-5">
+ <div class="p-5 text-center children-special-page">
+  <div class="container py-5 game-layout d-flex flex-column flex-md-row align-items-center justify-content-between gap-5 text-start">
+    
+    <!-- Yazılar -->
+    <div class="game-text">
       <h1 class="playwrite-de-grund text-light pb-3">
         Çocuklara Özel Sayfamıza Hoşgeldin Çevreci Dostumuz!
       </h1>
-      <p class="col-lg-8 mx-auto lead roboto-condensed-16px text-light">
-        Aşağıda eğlenirken öğrenebileceğin birbirinden eğlenceli 3 oyun seni
-        bekliyor: <br>
-
+      <p class="lead roboto-condensed-16px text-light">
+        Bu sayfada eğlenirken öğrenebileceğin birbirinden eğlenceli 3 oyun seni bekliyor: <br>
         Haydi başla, senin gibi minik kahramanlara ihtiyacımız var!
       </p>
     </div>
+
+    <!-- Butonlar -->
+    <div class="gameDirection">
+      <ul class="game-buttons">
+        <li><a href="#copler"><button>Çöpleri Ayrıştır!</button></a></li>
+        <li><a href="#agacDik"><button>Ağaç Dikelim!</button></a></li>
+        <li><a href="#musluguKapat"><button>Musluğu Kapat!</button></a></li>
+      </ul>
+    </div>
+    
   </div>
+</div>
+
+  
   <!--Oyun 1-->
   <div class="game-description">
-    <h2 class="text-light roboto-condensed-24px "> Çöpleri Ayrıştır!</h2>
+    <h2 id="copler" class="text-light roboto-condensed-24px "> Çöpleri Ayrıştır!</h2>
   </div>
   <section class="oyunBir">
     <div class="container">
@@ -120,7 +134,7 @@
   <!--İkinci Oyun-->
   <section class="oyunİki">
     <div class="game-description">
-      <h2 class="text-light roboto-condensed-24px ">Ağaş Dikelim!</h2>
+      <h2 id="agacDik" class="text-light roboto-condensed-24px ">Ağaş Dikelim!</h2>
     </div>
     <div id="gameArea">
       <div id="ground"></div>
@@ -132,7 +146,7 @@
 
   <!--Üçüncü Oyun-->
   <div class="game-description">
-    <h2 class="text-light roboto-condensed-24px "> Musluğu Kapat!</h2>
+    <h2 id="musluguKapat" class="text-light roboto-condensed-24px "> Musluğu Kapat!</h2>
   </div>
   <div class="game-area-bg">
     <div id="game-area-water">
@@ -156,21 +170,31 @@
   <div class="container-fluid" id="footer">
     <footer class="py-3 m-0">
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="" class="nav-link px-2">Gündem</a></li>
+        <li class="nav-item"><a href="/Haberler/gundem.html" class="nav-link px-2">Gündem</a></li>
         <li class="nav-item">
-          <a href="index.html#cozumler" class="nav-link px-2">Çözüm Önerileri</a>
+          <a href="/index.html#cozumler" class="nav-link px-2">Çözüm Önerileri</a>
         </li>
+       <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="izTestDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              İz Testi
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="izTestDropdown">
+              <li>
+                <a class="dropdown-item nav-link" href="/test/karbon-test.html">Karbon Ayak İzi Testi</a>
+              </li>
+              <li>
+                <a class="dropdown-item nav-link" href="/test/su-test.html">Su İzi Testi</a>
+              </li>
+            </ul>
+          </li>
         <li class="nav-item">
-          <a href="#" class="nav-link px-2">İz Testi</a>
-        </li>
-        <li class="nav-item">
-          <a href="index.html#veriler" class="nav-link px-2">Veriler</a>
+          <a href="/index.html#veriler" class="nav-link px-2">Veriler</a>
         </li>
         <li class="nav-item">
           <a class="nav-link child-special" href="/cocuklar-özel/cocuk.html">Çocuklara Özel</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link px-2">Biz Kimiz?</a>
+          <a href="/biz-kimiz/biz-kimiz.html" class="nav-link px-2">Biz Kimiz?</a>
         </li>
       </ul>
       <p class="text-center roboto-condensed-16px text-light">
@@ -178,6 +202,7 @@
         W-Code 2.0 | Kodluyoruz &amp; Gelecek Hayalim
       </p>
     </footer>
+     <button id="scrollToTopBtn" title="Yukarı Çık"><i class="bi bi-chevron-up"></i></button>
 
      <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     <script src="https://kit.fontawesome.com/d1da082d12.js" crossorigin="anonymous"></script>
