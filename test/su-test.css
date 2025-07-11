@@ -141,3 +141,24 @@ button.btn-primary:hover {
   color: white;
 }
 /* Pop-up Stil Tanımlamaları Sonu */
+.child-special {
+  background: linear-gradient(45deg, #78bbff, #d11ff5, #ff78fd, #fffb00);
+  background-size: 300% 300%;
+  animation: gradientMove 6s ease infinite;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
