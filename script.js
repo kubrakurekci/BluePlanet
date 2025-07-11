@@ -44,7 +44,23 @@ function animateCircleFill() {
   if (!circleFill) return;
   circleFill.style.strokeDashoffset = '0';
 }
+ document.addEventListener("DOMContentLoaded", function () {
+    const growingIcons = document.querySelectorAll(".growingIcon");
 
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.transform = "scale(1.2)";
+        }
+      });
+    }, {
+      threshold: 0.5, // Elemanın %50'si görünürse animasyonu başlat
+    });
+
+    growingIcons.forEach((icon) => {
+      observer.observe(icon);
+    });
+  });
 document.addEventListener('DOMContentLoaded', () => {
   animateCircleFill();
 

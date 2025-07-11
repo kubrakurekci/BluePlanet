@@ -358,8 +358,9 @@
   position: relative;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 0 16px 0 16px;
+  border-radius: 16px 16px 0 16px;
   padding: 12px;
+  min-height: 80px;
 }
 .gundem-card-title::after {
   content: "";

@@ -31,7 +31,7 @@
   <body>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand position-relative mx-5" href="#">
+        <a class="navbar-brand position-relative mx-5" href="/index.html">
           <img id="logo" src="/assets/logo.png" alt="Logo" />
           <span span class="text-light logo-back-text playwrite-de-grund"
             >BluePlanet</span
@@ -59,31 +59,15 @@
               >
             </li>
             <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="izTestDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                İz Testi
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="izTestDropdown">
-                <li>
-                  <a
-                    class="dropdown-item nav-link"
-                    href="/test/karbon-test.html"
-                    >Karbon Ayak İzi Testi</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item nav-link" href="/test/su-test.html"
-                    >Su İzi Testi</a
-                  >
-                </li>
-              </ul>
-            </li>
+            <a class="nav-link dropdown-toggle" href="#test" id="izTestDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              İz Testi
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="izTestDropdown">
+              <li><a class="dropdown-item nav-link" href="test/karbon-test.html">Karbon Ayak İzi Testi</a></li>
+              <li><a class="dropdown-item nav-link" href="test/su-test.html">Su İzi Testi</a></li>
+            </ul>
+          </li>
             <li class="nav-item">
               <a class="nav-link" href="/index.html#veriler">Veriler</a>
             </li>
@@ -163,15 +147,22 @@
     <div class="container-fluid" id="footer">
       <footer class="py-3 m-0">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-          <li class="nav-item"><a href="#" class="nav-link px-2">Gündem</a></li>
+          <li class="nav-item"><a href="/Haberler/gundem.html" class="nav-link px-2">Gündem</a></li>
           <li class="nav-item">
-            <a href="#" class="nav-link px-2">Çözüm Önerileri</a>
+            <a href="/index.html#cozumler" class="nav-link px-2">Çözüm Önerileri</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#test" id="izTestDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              İz Testi
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="izTestDropdown">
+              <li><a class="dropdown-item nav-link" href="/test/karbon-test.html">Karbon Ayak İzi Testi</a></li>
+              <li><a class="dropdown-item nav-link" href="/test/su-test.html">Su İzi Testi</a></li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link px-2">İz Testi</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2">Veriler</a>
+            <a href="/index.html#veriler" class="nav-link px-2">Veriler</a>
           </li>
           <li class="nav-item">
             <a class="nav-link child-special" href="/cocuklar-özel/cocuk.html"
@@ -179,7 +170,7 @@
             >
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link px-2">Biz Kimiz?</a>
+            <a href="/biz-kimiz/biz-kimiz.html" class="nav-link px-2">Biz Kimiz?</a>
           </li>
         </ul>
         <p class="text-center roboto-condensed-16px text-light">

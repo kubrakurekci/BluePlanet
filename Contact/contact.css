@@ -14,48 +14,49 @@
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-.nav-link{
+.nav-link {
   color: white;
-   display: inline-block;
+  display: inline-block;
   padding: 8px 16px;
   display: inline-block;
   border-radius: 8px;
   justify-content: center;
-margin: 4px;
+  margin: 4px;
 }
-.nav-link:active{
+.nav-link:active {
+  color: #fff;
+
+}
+.nav-link.show{
+  color: white !important;
+}
+.nav-link:hover {
+  color: #332d56;
+  background-color: #e3eeb2;
+}
+.nav-link:focus {
   color: #fff;
 }
-.nav-link:hover{
-  color: #332D56;
-  background-color: #E3EEB2;
-}
-.nav-link:visited{
-  color: #fff;
-}
-.nav-link:focus{
-  color: #fff;
-}
-.navbar-collapse{
+.navbar-collapse {
   flex-grow: 0;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.navbar-nav{
+.navbar-nav {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.dropdown-menu{
-  background-color: #332D56;
+.dropdown-menu {
+  background-color: #332d56;
   border: none;
   padding: 8px;
 }
-.dropdown-menu:active{
+.dropdown-menu:active {
   color: #fff;
 }
-.dropdown-item{
+.dropdown-item {
   margin-right: 4px;
 }
 .logo-back-text {
