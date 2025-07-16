@@ -96,8 +96,22 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 500);
     }, 500);
   }
-
   setInterval(showNextQuote, 6000);
+  
+const swiper = new Swiper(".swiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    576: { slidesPerView: 2 },
+    992: { slidesPerView: 4 },
+  },
+});
+
 
   const scrollBtn = document.getElementById("scrollToTopBtn");
   window.addEventListener("scroll", () => {
@@ -108,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
 //Oyun 1 Kodları
 let score = 0;
 let draggedItem = null;
