@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const originalCards = Array.from(scrollContainer.children);
 
-  // Kartları başa ve sona kopyala
   const prependClones = originalCards.map(card => {
     const clone = card.cloneNode(true);
     scrollContainer.insertBefore(clone, scrollContainer.firstChild);
@@ -54,7 +53,7 @@ function animateCircleFill() {
         }
       });
     }, {
-      threshold: 0.5, // Elemanın %50'si görünürse animasyonu başlat
+      threshold: 0.5, 
     });
 
     growingIcons.forEach((icon) => {
@@ -99,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(showNextQuote, 6000);
   
 const swiper = new Swiper(".swiper", {
-  slidesPerView: 1,
+  slidesPerView: 3,
   spaceBetween: 20,
   loop: true,
   navigation: {
@@ -127,7 +126,10 @@ const swiper = new Swiper(".swiper", {
 let score = 0;
 let draggedItem = null;
 
-// Rastgele konumlandırma fonksiyonu
+function refreshScore() {
+  document.getElementById('score').textContent = score;
+}
+
 function randomPosition(item, container) {
   const contWidth = container.clientWidth;
   const contHeight = container.clientHeight;
@@ -151,6 +153,7 @@ window.onload = () => {
     randomPosition(item, itemsContainer);
     item.addEventListener('dragstart', dragStart);
   });
+  refreshScore(); // Başlangıçta puanı göster
 };
 
 function dragStart(e) {
@@ -170,10 +173,13 @@ function drop(e) {
     e.currentTarget.appendChild(draggedItem);
     randomPosition(draggedItem, e.currentTarget);
     score += 10;
-    updateScore();
+    refreshScore();
   } else {
     alert("Yanlış kutu!");
   }
+  score -= 5;
+    if (score < 0) score = 0;
+    refreshScore();
 
   checkGameEndTrash();
 }
@@ -183,14 +189,15 @@ function checkGameEndTrash() {
   if (itemsLeft === 0) {
     const celebrationDiv = document.getElementById('celebration');
     celebrationDiv.style.display = 'block';
-    
+
     setTimeout(() => {
       celebrationDiv.style.display = 'none';
-    }, 3000); 
+    }, 3000);
   }
 }
 
 
+//oyun2
 const gameArea = document.getElementById('gameArea');
 const shovel = document.getElementById('shovel');
 const saplingIcon = document.getElementById('saplingIcon');

@@ -157,7 +157,7 @@
   margin: 4px;
 }
 .nav-link:active {
-  color: #fff;
+  color: #332D56;
 
 }
 .nav-link.show{
@@ -168,7 +168,7 @@
   background-color: #e3eeb2;
 }
 .nav-link:focus {
-  color: #fff;
+  color: #332D56;
 }
 .navbar-collapse {
   flex-grow: 0;
@@ -281,6 +281,9 @@
     background-position: 0% 50%;
   }
 }
+.title{
+  background-color: #332D56;
+}
 .playwrite-de-grund {
   font-family: "Playwrite DE Grund", cursive;
   font-optical-sizing: auto;
@@ -319,11 +322,11 @@
   font-size: 8px;
   border: 0px;
 }
-.empty-div .container {
+.text-div .container {
   position: relative;
   overflow: hidden;
   height: 80vh;
-  margin-top: 50%;
+  margin-top: 20%;
 }
 .gundem{
   background-color: rgba(255, 255, 255, 0.596);
@@ -336,7 +339,7 @@
 .swiper-slide{
   border-radius: 16px;
   background-color: #4e6688;
-  min-height: 300px;
+  min-height: 350px;
   height: auto;
    width: auto;
   max-width: 300px;
@@ -366,7 +369,7 @@
 }
 
 
-.card-title {
+.card-title-gundem {
   color: #332D56;
   position: relative;
   background-color: rgba(255, 255, 255, 0.518);
@@ -374,13 +377,14 @@
   border-radius: 16px;
    clip-path: polygon(
     0 0,           /* sol üst */
-    100% 20%,        /* sağ üst */
+    100% 10%,        /* sağ üst */
     calc(100% - 50px) 100%,  /* sağ alt 20px içeride */
-    100% 100%,     /* sağ alt köşe */
-    0 100%         /* sol alt */
+    80% 70%,     /* sağ alt köşe */
+    0 90%         
   );
+  min-height: 150px;
 }
-.card-description{
+.card-description-gundem{
   background-color: #4e6688;
   padding: 24px;
 }
@@ -398,7 +402,7 @@
   margin-top: 20px;
   padding-right: 16px;
    position: absolute;
-  bottom: 10%;
+  bottom: 2%;
   right: 20px;
   z-index: 5;
 }
@@ -427,7 +431,7 @@
   .btn-container {
     right: 50%;
     transform: translateX(50%);
-    bottom: 10%;
+    bottom: 2%;
   }
 }
 

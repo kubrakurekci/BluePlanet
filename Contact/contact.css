@@ -24,7 +24,7 @@
   margin: 4px;
 }
 .nav-link:active {
-  color: #fff;
+  color: #332D56;
 
 }
 .nav-link.show{
@@ -35,7 +35,7 @@
   background-color: #e3eeb2;
 }
 .nav-link:focus {
-  color: #fff;
+  color: #332D56;
 }
 .navbar-collapse {
   flex-grow: 0;
