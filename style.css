@@ -585,6 +585,7 @@ text-align: center;
 }
 .carousel {
   background-color: #4e6688e7;
+  min-height: 500px;
 }
 .children-special-page {
   background: linear-gradient(

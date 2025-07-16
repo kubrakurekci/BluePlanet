@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(showNextQuote, 6000);
   
 const swiper = new Swiper(".swiper", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 20,
   loop: true,
   navigation: {

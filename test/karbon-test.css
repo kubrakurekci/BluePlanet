@@ -3,7 +3,7 @@ body {
   background: linear-gradient(90deg, #064420 0%, #0b6a34 50%, #064420 100%);
   color: #d4f1d4; /* Açık yeşil, okunabilir metin rengi */
   min-height: 100vh;
-  margin-top: 80px;
+  margin-top: 0px;
 
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }

@@ -276,7 +276,7 @@ position: relative;
   padding: 2px 6px;
   border-radius: 4px;
 }
- #scrollToTopBtn {
+#scrollToTopBtn {
   position: fixed;
   bottom: 30px;
   right: 30px;

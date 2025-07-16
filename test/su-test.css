@@ -3,7 +3,7 @@ body {
   background: linear-gradient(to bottom right, #003f5c, #2f4b7c);
   color: #c0deed; /* Açık mavi okunabilir metin rengi */
   min-height: 100vh; /* Sayfa yüksekliği boyunca arka plan */
-  margin-top: 80px;
+  margin-top: 0px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -56,7 +56,7 @@ button.btn-primary:hover {
 }
 
 .navbar {
-  background-color: #332d56e8 !important;
+   background-color: #332d56e8 !important;
 }
 
 /* Pop-up Stil Tanımlamaları Başlangıcı */
