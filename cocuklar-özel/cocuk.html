@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Çocuklar Özel</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="/style.css">
@@ -15,6 +16,7 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
@@ -22,7 +24,8 @@
         <img id="logo" src="/assets/logo.png" alt="Logo">
         <span span="" class="text-light logo-back-text playwrite-de-grund">BluePlanet</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -34,7 +37,8 @@
             <a class="nav-link" href="/index.html#cozumler">Çözüm Önerileri</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="izTestDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="izTestDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               İz Testi
             </a>
             <ul class="dropdown-menu" aria-labelledby="izTestDropdown">
@@ -67,33 +71,34 @@
     </div>
   </nav>
   <!--Çocuklara Özel İçerik-->
- <div class="p-5 text-center children-special-page">
-  <div class="container py-5 game-layout d-flex flex-column flex-md-row align-items-center justify-content-between gap-5 text-start">
-    
-    <!-- Yazılar -->
-    <div class="game-text">
-      <h1 class="playwrite-de-grund text-light pb-3">
-        Çocuklara Özel Sayfamıza Hoşgeldin Çevreci Dostumuz!
-      </h1>
-      <p class="lead roboto-condensed-16px text-light">
-        Bu sayfada eğlenirken öğrenebileceğin birbirinden eğlenceli 3 oyun seni bekliyor: <br>
-        Haydi başla, senin gibi minik kahramanlara ihtiyacımız var!
-      </p>
-    </div>
+  <div class="p-5 text-center children-special-page">
+    <div
+      class="container py-5 game-layout d-flex flex-column flex-md-row align-items-center justify-content-between gap-5 text-start">
 
-    <!-- Butonlar -->
-    <div class="gameDirection">
-      <ul class="game-buttons">
-        <li><a href="#copler"><button>Çöpleri Ayrıştır!</button></a></li>
-        <li><a href="#agacDik"><button>Ağaç Dikelim!</button></a></li>
-        <li><a href="#musluguKapat"><button>Musluğu Kapat!</button></a></li>
-      </ul>
+      <!-- Yazılar -->
+      <div class="game-text">
+        <h1 class="playwrite-de-grund text-light pb-3">
+          Çocuklara Özel Sayfamıza Hoşgeldin Çevreci Dostumuz!
+        </h1>
+        <p class="lead roboto-condensed-16px text-light">
+          Bu sayfada eğlenirken öğrenebileceğin birbirinden eğlenceli 3 oyun seni bekliyor: <br>
+          Haydi başla, senin gibi minik kahramanlara ihtiyacımız var!
+        </p>
+      </div>
+
+      <!-- Butonlar -->
+      <div class="gameDirection">
+        <ul class="game-buttons">
+          <li><a href="#copler"><button>Çöpleri Ayrıştır!</button></a></li>
+          <li><a href="#agacDik"><button>Ağaç Dikelim!</button></a></li>
+          <li><a href="#musluguKapat"><button>Musluğu Kapat!</button></a></li>
+        </ul>
+      </div>
+
     </div>
-    
   </div>
-</div>
 
-  
+
   <!--Oyun 1-->
   <div class="game-description">
     <h2 id="copler" class="text-light roboto-condensed-24px "> Çöpleri Ayrıştır!</h2>
@@ -107,25 +112,36 @@
       </div>
 
       <div class="items">
-        <img src="/cocuklar-özel/cocuklar_assets/banana-peel.png" class="item" draggable="true" data-type="organik" alt="Muz Kabuğu" style="left: 79px; top: 61px;">
-        <img src="/cocuklar-özel/cocuklar_assets/plastic-bottle.png" class="item" draggable="true" data-type="geri" alt="Plastik Şişe" style="left: 187px; top: 12px;">
-        <img src="/cocuklar-özel/cocuklar_assets/glass-bottle.png" class="item" draggable="true" data-type="geri" alt="Cam Şişe" style="left: 161px; top: 57px;">
-        <img src="/cocuklar-özel/cocuklar_assets/battery.png" class="item" draggable="true" data-type="diger" alt="Pil" style="left: 44px; top: 60px;">
-        <img src="/cocuklar-özel/cocuklar_assets/eated-apple.png" class="item" draggable="true" data-type="organik" alt="Elma Kabuğu" style="left: 182px; top: 13px;">
+        <img src="/cocuklar-özel/cocuklar_assets/banana-peel.png" class="item" draggable="true" data-type="organik"
+          alt="Muz Kabuğu" style="left: 79px; top: 61px;">
+        <img src="/cocuklar-özel/cocuklar_assets/plastic-bottle.png" class="item" draggable="true" data-type="geri"
+          alt="Plastik Şişe" style="left: 187px; top: 12px;">
+        <img src="/cocuklar-özel/cocuklar_assets/glass-bottle.png" class="item" draggable="true" data-type="geri"
+          alt="Cam Şişe" style="left: 161px; top: 57px;">
+        <img src="/cocuklar-özel/cocuklar_assets/battery.png" class="item" draggable="true" data-type="diger" alt="Pil"
+          style="left: 44px; top: 60px;">
+        <img src="/cocuklar-özel/cocuklar_assets/eated-apple.png" class="item" draggable="true" data-type="organik"
+          alt="Elma Kabuğu" style="left: 182px; top: 13px;">
       </div>
 
       <div class="game-area">
-        <div class="bin d-flex flex-column justify-content-center align-items-center" data-accept="organik" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <div class="bin d-flex flex-column justify-content-center align-items-center" data-accept="organik"
+          ondragover="allowDrop(event)" ondrop="drop(event)">
           <h3 class="roboto-condensed-16px fw-bold">Organik</h3>
-          <img src="/cocuklar-özel/cocuklar_assets/4e9ac647-4519-4ff1-9f24-cca4a77bfe65_removalai_preview.png" width="100" alt="Organik Kutusu">
+          <img src="/cocuklar-özel/cocuklar_assets/4e9ac647-4519-4ff1-9f24-cca4a77bfe65_removalai_preview.png"
+            width="100" alt="Organik Kutusu">
         </div>
-        <div class="bin d-flex flex-column justify-content-center align-items-center" data-accept="geri" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <div class="bin d-flex flex-column justify-content-center align-items-center" data-accept="geri"
+          ondragover="allowDrop(event)" ondrop="drop(event)">
           <h3 class="roboto-condensed-16px fw-bold">Geri Dönüşüm</h3>
-          <img src="/cocuklar-özel/cocuklar_assets/865b16a5-4c55-49c3-b614-82fbad9cfa9a_removalai_preview.png" width="100" alt="Geri Dönüşüm Kutusu">
+          <img src="/cocuklar-özel/cocuklar_assets/865b16a5-4c55-49c3-b614-82fbad9cfa9a_removalai_preview.png"
+            width="100" alt="Geri Dönüşüm Kutusu">
         </div>
-        <div class="bin d-flex flex-column justify-content-center align-items-center" data-accept="diger" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <div class="bin d-flex flex-column justify-content-center align-items-center" data-accept="diger"
+          ondragover="allowDrop(event)" ondrop="drop(event)">
           <h3 class="roboto-condensed-16px fw-bold">Diğer</h3>
-          <img src="/cocuklar-özel/cocuklar_assets/b37cad0f-ccd2-42bc-9314-4c6a085cc025_removalai_preview.png" width="100" alt="Diğer Kutusu">
+          <img src="/cocuklar-özel/cocuklar_assets/b37cad0f-ccd2-42bc-9314-4c6a085cc025_removalai_preview.png"
+            width="100" alt="Diğer Kutusu">
         </div>
       </div>
     </div>
@@ -174,19 +190,20 @@
         <li class="nav-item">
           <a href="/index.html#cozumler" class="nav-link px-2">Çözüm Önerileri</a>
         </li>
-       <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="izTestDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              İz Testi
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="izTestDropdown">
-              <li>
-                <a class="dropdown-item nav-link" href="/test/karbon-test.html">Karbon Ayak İzi Testi</a>
-              </li>
-              <li>
-                <a class="dropdown-item nav-link" href="/test/su-test.html">Su İzi Testi</a>
-              </li>
-            </ul>
-          </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="izTestDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            İz Testi
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="izTestDropdown">
+            <li>
+              <a class="dropdown-item nav-link" href="/test/karbon-test.html">Karbon Ayak İzi Testi</a>
+            </li>
+            <li>
+              <a class="dropdown-item nav-link" href="/test/su-test.html">Su İzi Testi</a>
+            </li>
+          </ul>
+        </li>
         <li class="nav-item">
           <a href="/index.html#veriler" class="nav-link px-2">Veriler</a>
         </li>
@@ -202,14 +219,14 @@
         W-Code 2.0 | Kodluyoruz &amp; Gelecek Hayalim
       </p>
     </footer>
-     <button id="scrollToTopBtn" title="Yukarı Çık"><i class="bi bi-chevron-up"></i></button>
+    <button id="scrollToTopBtn" title="Yukarı Çık"><i class="bi bi-chevron-up"></i></button>
 
-     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     <script src="https://kit.fontawesome.com/d1da082d12.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"></script>
     <script src=" /script.js"></script>
   </div>
-  </body>
-  </html>
+</body>
+</html>
