@@ -160,6 +160,9 @@
   color: #332D56;
 
 }
+.nav-link:visited{
+  color: white;
+}
 .nav-link.show{
   color: white !important;
 }
@@ -188,6 +191,9 @@
 }
 .dropdown-menu:active {
   color: #fff;
+}
+.dropdown-menu:visited{
+  color: white !important;
 }
 .dropdown-item {
   margin-right: 4px;
@@ -281,8 +287,14 @@
     background-position: 0% 50%;
   }
 }
+.text-div .container {
+  position: relative;
+  overflow: hidden;
+  height: 80vh;
+  margin-top: 20%;
+}
 .title{
-  background-color: #332D56;
+  background-color: #332d56cf;
 }
 .playwrite-de-grund {
   font-family: "Playwrite DE Grund", cursive;
@@ -322,80 +334,123 @@
   font-size: 8px;
   border: 0px;
 }
-.text-div .container {
-  position: relative;
-  overflow: hidden;
+.gundem {
+ background-color: rgba(255, 255, 255, 0.596);
   height: 80vh;
-  margin-top: 20%;
-}
-.gundem{
-  background-color: rgba(255, 255, 255, 0.596);
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
    position: relative;
+   padding: 48px;
 }
-.swiper-slide{
-  border-radius: 16px;
-  background-color: #4e6688;
-  min-height: 350px;
-  height: auto;
-   width: auto;
-  max-width: 300px;
-}
-.swiper-button-next,
-.swiper-button-prev {
-  background-color: #E3EEB2;
-  width: 40px;
-  height: 40px;
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  background: #E3EEB2;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
-    transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 4px 2px 8px rgba(1,8,8,0.7);
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+  z-index: 10;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 20px !important; 
-  color: #332D56;
-}
-.swiper-button-next:hover,
-.swiper-button-prev:hover{
-  transform: scale(1.2);
+.swiper-button-prev {
+  left: 10px;
 }
 
+.swiper-button-next {
+  right: 10px;
+}
 
-.card-title-gundem {
-  color: #332D56;
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.card-wrapper-gundem {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.card-wrapper-gundem::-webkit-scrollbar {
+  height: 8px;
+}
+
+.card-wrapper-gundem::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+.card-wrapper-gundem::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.card-gundem {
+  flex: 0 0 280px;
+  background: #fff;
+  border-radius: 16px 16px 0px 0px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 0;
+  scroll-snap-align: start;
+  background-color: #4e6688;
+  clip-path: polygon(
+    0 0,          
+    100% 0,        
+    100% 100%,  
+    50% 90%,     
+    0 100%         
+  );
+}
+.card-wrapper-gundem {
+  scrollbar-width: none;         
+  -ms-overflow-style: none;        
+}
+
+.card-wrapper-gundem::-webkit-scrollbar {
+  display: none;                   
+}
+
+.title-gundem {
+ color: #332D56;
   position: relative;
   background-color: rgba(255, 255, 255, 0.518);
   padding: 16px;
+  margin: 0px;
   border-radius: 16px;
    clip-path: polygon(
-    0 0,           /* sol üst */
-    100% 10%,        /* sağ üst */
-    calc(100% - 50px) 100%,  /* sağ alt 20px içeride */
-    80% 70%,     /* sağ alt köşe */
-    0 90%         
+    0 0,          
+    100% 20%,        
+    calc(100% - 50px) 100%,  
+    80% 90%,     
+    0 100%         
   );
-  min-height: 150px;
+  min-height: 100px;
 }
-.card-description-gundem{
+
+.description-gundem {
+  color: white;
   background-color: #4e6688;
-  padding: 24px;
+  padding: 0px 16px;
+  min-height: 200px;
+  font-size: 16px;
+
 }
-.swiper-wrapper{
-  padding: 48px;
-  box-sizing: border-box;
-}
-.swiper {
-  padding-left: 48px;
-  padding-right: 48px;
-}
+
+
 .btn-container {
   display: flex;
   justify-content: flex-end;
@@ -586,6 +641,8 @@ text-align: center;
 .carousel {
   background-color: #4e6688e7;
   min-height: 500px;
+  align-items: center;
+  justify-content: center;
 }
 .children-special-page {
   background: linear-gradient(

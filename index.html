@@ -1,482 +1,715 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BluePlanet</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Indie+Flower&family=Playwrite+DE+Grund:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BluePlanet</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Indie+Flower&family=Playwrite+DE+Grund:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-</head>
-
-
-<body>
-  <video autoplay muted loop playsinline id="bg-video" src=" /assets/37088-413229662_small.mp4"></video>
-  <nav class="navbar  navbar-expand-lg ">
-    <div class="container-fluid">
-      <a class="navbar-brand position-relative mx-5" href="/index.html">
-        <img id="logo" src="/assets/logo.png" alt="Logo" />
-        <span class="text-light logo-back-text playwrite-de-grund">BluePlanet</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/Haberler/gundem.html">Gündem</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#cozumler">Çözüm Önerileri</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#test" id="izTestDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              İz Testi
+  <body>
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      id="bg-video"
+      src=" /assets/37088-413229662_small.mp4"
+    ></video>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand position-relative mx-5" href="/index.html">
+          <img id="logo" src="/assets/logo.png" alt="Logo" />
+          <span class="text-light logo-back-text playwrite-de-grund"
+            >BluePlanet</span
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/Haberler/gundem.html">Gündem</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cozumler">Çözüm Önerileri</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#test"
+                id="izTestDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                İz Testi
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="izTestDropdown">
+                <li>
+                  <a class="dropdown-item nav-link" href="test/karbon-test.html"
+                    >Karbon Ayak İzi Testi</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item nav-link" href="test/su-test.html"
+                    >Su İzi Testi</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#veriler">Veriler</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link child-special" href="/cocuklar-özel/cocuk.html"
+                >Çocuklara Özel</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/biz-kimiz/biz-kimiz.html"
+                >Biz Kimiz?</a
+              >
+            </li>
+            <a href="/Contact/contact.html" style="text-decoration: none">
+              <div
+                class="d-flex ms-auto p-1 m-0 contact-icon align-items-center justify-content-center"
+              >
+                <div class="pulse-ring"></div>
+                <div class="pulse-ring delay"></div>
+                <img
+                  src="/assets/contact_support_52dp_FFF_FILL0_wght400_GRAD0_opsz48.png"
+                  alt="Destek"
+                />
+              </div>
             </a>
-            <ul class="dropdown-menu" aria-labelledby="izTestDropdown">
-              <li><a class="dropdown-item nav-link" href="test/karbon-test.html">Karbon Ayak İzi Testi</a></li>
-              <li><a class="dropdown-item nav-link" href="test/su-test.html">Su İzi Testi</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#veriler">Veriler</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link child-special" href="/cocuklar-özel/cocuk.html">Çocuklara Özel</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/biz-kimiz/biz-kimiz.html">Biz Kimiz?</a>
-          </li>
-          <a href="/Contact/contact.html" style="text-decoration: none;">
-            <div class="d-flex ms-auto p-1 m-0 contact-icon align-items-center justify-content-center">
-              <div class="pulse-ring"></div>
-              <div class="pulse-ring delay"></div>
-              <img src="/assets/contact_support_52dp_FFF_FILL0_wght400_GRAD0_opsz48.png" alt="Destek">
-            </div>
-          </a>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-
-  <div class="text-div">
-    <div class="p-5 text-center">
-      <div class="container py-5">
-        <p id="quoteText" class="col-lg-8 mx-auto lead text-light roboto-condensed-24px fst-italic fw-light">
-          "Doğa, insanın en büyük müttefikidir; ona sahip çıkmak, geleceğe sahip çıkmaktır."
-        </p>
-        <h1 id="quoteAuthor" class="text-light playwrite-de-grund fs-2">Franklin D. Roosevelt</h1>
-      </div>
-    </div>
-  </div>
-
-  <!--Gündem-->
-   <div class="container-fluid px-5 py-2 content title">
-   <h2 class="pb-2 pt-5 border-bottom playwrite-de-grund text-light ">Gündem</h2>
-  </div>
-  <section class="gundem">
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="card-title-gundem roboto-condensed-24px fs-5 fw-bold">Yeni Küresel Enerji Raporu</div>
-          <div class="card-description-gundem roboto-condensed-16px  fw-lighter text-light">
-            WECAN'in yeni raporu, fosil yakıtlardan adil bir geçiş için topluluk liderliğindeki enerji çözümlerini
-            vurguluyor.
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card-title-gundem roboto-condensed-24px fs-5 fw-bold">İklim krizini çözme konusunda sosyal dönüm noktası
-          </div>
-          <div class="card-description-gundem  roboto-condensed-16px  fw-lighter text-light">
-            Dünya, insanlık ve gezegen için risk konusunda fazla iyimser davrandı - ancak yıkımın hala önlenebileceğini
-            söylüyor.
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card-title-gundem roboto-condensed-24px fs-5 fw-bold">Dünya halkının sessiz çoğunluğu daha güçlü bir
-            iklim eylemi istiyor</div>
-          <div class="card-description-gundem  roboto-condensed-16px  fw-lighter text-light">
-            The Guardian, 89% Projesi'ni başlatmak ve dünya nüfusunun büyük çoğunluğunun iklim eylemi istediği gerçeğini
-            vurgulamak için güçlerini birleştiriyor.
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card-title-gundem roboto-condensed-24px fs-5 fw-bold">İklim değişikliği konusunda ilerleme kaydettiğimiz
-            5 yol</div>
-          <div class="card-description-gundem  roboto-condensed-16px  fw-lighter text-light">
-            İklim değişikliği çok gerçek ve bedeli her geçen yıl kötüleşiyor. 2024, kayıtlardaki en sıcak yıldı.
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card-title-gundem roboto-condensed-24px fs-5 fw-bold">Dünya, iklim modellerinin tahmininden çok daha
-            fazla ısı yakıyor</div>
-          <div class="card-description-gundem  roboto-condensed-16px  fw-lighter text-light">
-            20 yıl içinde oran iki katına çıktı ve bu ciddi bir alarmdır.
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card-title-gundem roboto-condensed-16px fw-bold ">Akdeniz’deki Rekor Sıcaklık Ekosistemler için Yıkıcı
-            Sonuçlara Yol Açabilir</div>
-          <div class="card-description-gundem  roboto-condensed-16px  fw-lighter text-light">
-            Yeni verilere göre, Akdeniz’de deniz yüzeyi sıcaklıkları haziran ayı için şimdiye dek kaydedilen en yüksek
-            seviyeye ulaştı.
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card-title-gundem roboto-condensed-16px fw-bold ">AB’nin Emisyon Hedefine “Göstermelik” Eleştirisi</div>
-          <div class="card-description-gundem  roboto-condensed-16px  fw-lighter text-light">
-            Avrupa Komisyonu 2040 yılına kadar emisyonlarda %90 kesinti hedefini açıklarken önerilen hedef, çevreci gruplardan tepki gördü.
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card-title-gundem roboto-condensed-16px fw-bold ">İklim Kanunu Teklifi Kabul Edildi</div>
-          <div class="card-description-gundem  roboto-condensed-16px  fw-lighter text-light">
-            Hükümet tarafından TBMM’ye sunulan İklim Kanunu teklifi kabul edilerek yasalaştı. İklim Kanunu’nun kabulü muhalefet partileri, iklim ve çevre STK’ları tarafından eleştiriyle karşılandı.
-          </div>
+          </ul>
         </div>
       </div>
+    </nav>
 
-      <!-- Navigasyon okları -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+    <div class="text-div">
+      <div class="p-5 text-center">
+        <div class="container py-5">
+          <p
+            id="quoteText"
+            class="col-lg-8 mx-auto lead text-light roboto-condensed-24px fst-italic fw-light"
+          >
+            "Doğa, insanın en büyük müttefikidir; ona sahip çıkmak, geleceğe
+            sahip çıkmaktır."
+          </p>
+          <h1 id="quoteAuthor" class="text-light playwrite-de-grund fs-2">
+            Franklin D. Roosevelt
+          </h1>
+        </div>
+      </div>
     </div>
-    <div class="button">
+
+    <!--Gündem-->
+    <div class="container-fluid px-5 py-2 content title">
+      <h2 class="pb-2 pt-5 border-bottom playwrite-de-grund text-light">
+        Gündem
+      </h2>
+    </div>
+    <section class="gundem">
+      <div class="swiper-button-prev" aria-label="Önceki kart">&#10094;</div>
+      <div class="swiper-button-next" aria-label="Sonraki kart">&#10095;</div>
+
+      <div class="card-wrapper-gundem ">
+        <div class="card-gundem">
+          <div class="title-gundem roboto-condensed-24px fs-5">Dünya İklim İşini İki Katına Çıkarıyor</div>
+          <div class="description-gundem roboto-condensed-16px fw-lighter">
+            Şehrin İklim Eylem Haftası'nda bir hafta boyunca hem kayıtlara geçen
+            hem de kapalı kapılar ardında yapılan röportajlar, etkinlikler ve
+            toplantılar bana birçok düşünce bıraktı.
+          </div>
+        </div>
+        <div class="card-gundem">
+          <div class="title-gundem roboto-condensed-24px fs-5">Yeni Küresel Enerji Raporu</div>
+          <div class="description-gundem roboto-condensed-16px fw-lighter">
+            WECAN'in yeni raporu,fosil yakıtlardan adil bir geçiş için topluluk
+            liderliğindeki enerji çözümlerini vurguluyor.
+          </div>
+        </div>
+        <div class="card-gundem">
+          <div class="title-gundem roboto-condensed-24px fs-5">
+            İklim krizini çözme konusunda sosyal dönüm noktası
+          </div>
+          <div class="description-gundem roboto-condensed-16px fw-lighter">
+            Dünya, insanlık ve gezegen için risk konusunda fazla iyimser
+            davrandı - ancak yıkımın hala önlenebileceğini söylüyor -Timothy
+            Lenton
+          </div>
+        </div>
+        <div class="card-gundem">
+          <div class="title-gundem roboto-condensed-24px fs-5">
+            Dünya halkının sessiz çoğunluğu daha güçlü bir iklim eylemi istiyor
+          </div>
+          <div class="description-gundem roboto-condensed-16px fw-lighter">
+            The Guardian, 89% Projesi'ni başlatmak ve dünya nüfusunun büyük
+            çoğunluğunun iklim eylemi istediği gerçeğini vurgulamak için dünya
+            çapında düzinelerce haber merkeziyle güçlerini birleştiriyor.
+          </div>
+        </div>
+        <div class="card-gundem">
+          <div class="title-gundem roboto-condensed-24px fs-5">
+            İklim değişikliği konusunda ilerleme kaydettiğimiz 5 yol
+          </div>
+          <div class="description-gundem roboto-condensed-16px fw-lighter">
+            İklim değişikliği çok gerçek ve bedeli her geçen yıl kötüleşiyor.
+            2024, kayıtlardaki en sıcak yıldı ve ortalama küresel sıcaklığın
+            sanayi öncesi döneme göre 1,5 santigrat derece daha yüksek olduğu
+            ilk yıldı.
+          </div>
+        </div>
+        <div class="card-gundem">
+          <div class="title-gundem roboto-condensed-24px fs-5">
+            Dünya, iklim modellerinin tahmininden çok daha fazla ısı yakıyor ve
+            oran 20 yıl içinde iki katına çıktı
+          </div>
+          <div class="description-gundem roboto-condensed-16px fw-lighter">
+            İklim değişikliğini nasıl ölçüyorsunuz? Bunun bir yolu, uzun bir
+            süre boyunca farklı yerlerdeki sıcaklıkları kaydetmektir. Bu iyi
+            çalışsa da, doğal varyasyon daha uzun vadeli eğilimleri görmeyi
+            zorlaştırabilir.
+          </div>
+        </div>
+        <div class="card-gundem">
+          <div class="title-gundem roboto-condensed-24px fs-5">
+            Akdeniz’deki Rekor Sıcaklık Ekosistemler için Yıkıcı Sonuçlara Yol
+            Açabilir
+          </div>
+          <div class="description-gundem roboto-condensed-16px fw-lighter">
+            Yeni verilere göre, Akdeniz’de deniz yüzeyi sıcaklıkları haziran ayı
+            için şimdiye dek kaydedilen en yüksek seviyeye ulaştı.
+          </div>
+        </div>
+        <div class="card-gundem">
+          <div class="title-gundem roboto-condensed-24px fs-5">
+            AB’nin Emisyon Hedefine “Göstermelik” Eleştirisi
+          </div>
+          <div class="description-gundem roboto-condensed-16px fw-lighter">
+            Avrupa Komisyonu 2040 yılına kadar emisyonlarda %90 kesinti hedefini
+            açıklarken önerilen hedef, çevreci gruplardan tepki gördü.
+          </div>
+        </div>
+        <div class="button">
       <div class="btn-container">
         <a class="btn roboto-condensed-btn" href="/Haberler/gundem.html">Tüm Haberleri İncele</a>
       </div>
-    </div>
-  </section>
 
+      </div>
+    </section>
 
-  <!--Çözüm Önerileri-->
-  <div class="container-fluid px-5 py-2 content " id="cozumler">
-    <h2 class="pb-2 pt-5 border-bottom playwrite-de-grund text-light ">Çözüm Önerileri</h2>
-    <div class="row g-4 py-5 my-2 row-cols-1 row-cols-lg-3">
-      <div class="col  " data-aos="fade-up">
-        <div class="features d-flex flex-column card-bg save-water">
-          <div
-            class="feature-icon growingItem d-inline-flex align-items-center justify-content-center fs-2 mb-3 growingIcon ">
-            <i class="bi bi-droplet-fill"></i>
+    <!--Çözüm Önerileri-->
+    <div class="container-fluid px-5 py-2 content" id="cozumler">
+      <h2 class="pb-2 pt-5 border-bottom playwrite-de-grund text-light">
+        Çözüm Önerileri
+      </h2>
+      <div class="row g-4 py-5 my-2 row-cols-1 row-cols-lg-3">
+        <div class="col" data-aos="fade-up">
+          <div class="features d-flex flex-column card-bg save-water">
+            <div
+              class="feature-icon growingItem d-inline-flex align-items-center justify-content-center fs-2 mb-3 growingIcon"
+            >
+              <i class="bi bi-droplet-fill"></i>
+            </div>
+            <h3 class="roboto-condensed-24px">
+              Bulaşıkları sudan geçirmeden makineye koymak
+            </h3>
+            <p class="roboto-condensed-16px">
+              Bu alışkanlık yılda ortalama %30 su tasarrufu sağlar. Ortalama bir
+              evde yılda 15.000 litreye kadar su israfının önüne geçilir.
+            </p>
           </div>
-          <h3 class="roboto-condensed-24px">Bulaşıkları sudan geçirmeden makineye koymak</h3>
-          <p class="roboto-condensed-16px">Bu alışkanlık yılda ortalama %30 su tasarrufu sağlar. Ortalama bir evde yılda
-            15.000 litreye kadar su israfının önüne geçilir.</p>
         </div>
-      </div>
-      <div class="col" data-aos="fade-up">
-        <div class="features d-flex flex-column card-bg save-energy">
-          <div
-            class="feature-icon growingItem d-inline-flex align-items-center justify-content-center fs-2 mb-3 growingIcon">
-            <i class="bi bi-lightbulb-fill"></i>
+        <div class="col" data-aos="fade-up">
+          <div class="features d-flex flex-column card-bg save-energy">
+            <div
+              class="feature-icon growingItem d-inline-flex align-items-center justify-content-center fs-2 mb-3 growingIcon"
+            >
+              <i class="bi bi-lightbulb-fill"></i>
+            </div>
+            <h3 class="roboto-condensed-24px">Ampulleri LED ile değiştirmek</h3>
+            <p class="roboto-condensed-16px">
+              LED ampuller, akkor ampullere göre %80 daha az enerji tüketir.
+              Yılda ortalama 75 kg karbon salımını azaltabilir.
+            </p>
           </div>
-          <h3 class="roboto-condensed-24px">Ampulleri LED ile değiştirmek</h3>
-          <p class="roboto-condensed-16px">LED ampuller, akkor ampullere göre %80 daha az enerji tüketir. Yılda ortalama
-            75 kg karbon salımını azaltabilir.</p>
         </div>
-      </div>
-      <div class="col" data-aos="fade-up">
-        <div class="features d-flex flex-column card-bg save-bath-water">
-          <div
-            class="feature-icon growingItem d-inline-flex align-items-center justify-content-center fs-2 mb-3 growingIcon">
-            <i class="fa-solid fa-bath"></i>
+        <div class="col" data-aos="fade-up">
+          <div class="features d-flex flex-column card-bg save-bath-water">
+            <div
+              class="feature-icon growingItem d-inline-flex align-items-center justify-content-center fs-2 mb-3 growingIcon"
+            >
+              <i class="fa-solid fa-bath"></i>
+            </div>
+            <h3 class="roboto-condensed-24px">5 dakikalık duş süresi</h3>
+            <p class="roboto-condensed-16px">
+              Her duş süresini 10 dakikadan 5 dakikaya indirmek, yılda yaklaşık
+              18.000 litre su tasarrufu sağlar. Bu da bir insanın yaklaşık 180
+              duşluk su ihtiyacına denk!
+            </p>
           </div>
-          <h3 class="roboto-condensed-24px">5 dakikalık duş süresi</h3>
-          <p class="roboto-condensed-16px">Her duş süresini 10 dakikadan 5 dakikaya indirmek, yılda yaklaşık 18.000
-            litre su tasarrufu sağlar. Bu da bir insanın yaklaşık 180 duşluk su ihtiyacına denk!</p>
         </div>
-      </div>
-      <div class="col" data-aos="fade-up">
-        <div class="features d-flex flex-column card-bg unplug-devices">
-          <div
-            class="feature-icon growingItem d-inline-flex align-items-center justify-content-center fs-2 mb-3 growingIcon">
-            <i class="fa-solid fa-plug"></i>
+        <div class="col" data-aos="fade-up">
+          <div class="features d-flex flex-column card-bg unplug-devices">
+            <div
+              class="feature-icon growingItem d-inline-flex align-items-center justify-content-center fs-2 mb-3 growingIcon"
+            >
+              <i class="fa-solid fa-plug"></i>
+            </div>
+            <h3 class="roboto-condensed-24px">
+              Kullanılmayan elektronik aletleri prizden çekmek
+            </h3>
+            <p class="roboto-condensed-16px">
+              “Vampir enerji” olarak bilinen bu gizli tüketim, yıllık elektrik
+              faturasının %10'una kadarına denk gelebilir. Ayrıca karbon
+              salımını da yılda ortalama 100 kg azaltır.
+            </p>
           </div>
-          <h3 class="roboto-condensed-24px">Kullanılmayan elektronik aletleri prizden çekmek</h3>
-          <p class="roboto-condensed-16px">“Vampir enerji” olarak bilinen bu gizli tüketim, yıllık elektrik faturasının
-            %10'una kadarına denk gelebilir. Ayrıca karbon salımını da yılda ortalama 100 kg azaltır.</p>
         </div>
-      </div>
-      <div class="col" data-aos="fade-up">
-        <div class="features d-flex flex-column card-bg wash-at-30">
-          <div
-            class="feature-icon growingItem d-inline-flex align-items-center justify-content-center fs-2 mb-3 growingIcon">
-            <i class="bi bi-thermometer-low"></i>
+        <div class="col" data-aos="fade-up">
+          <div class="features d-flex flex-column card-bg wash-at-30">
+            <div
+              class="feature-icon growingItem d-inline-flex align-items-center justify-content-center fs-2 mb-3 growingIcon"
+            >
+              <i class="bi bi-thermometer-low"></i>
+            </div>
+            <h3 class="roboto-condensed-24px">30°C'de çamaşır yıkamak</h3>
+            <p class="roboto-condensed-16px">
+              60°C yerine 30°C’de yıkama,makinenin enerji tüketimini yarıya
+              indirir. Bu da yılda saatlerce ışık açık bırakmaya eşdeğer enerji
+              tasarrufu demek.
+            </p>
           </div>
-          <h3 class="roboto-condensed-24px">30°C'de çamaşır yıkamak</h3>
-          <p class="roboto-condensed-16px">60°C yerine 30°C’de yıkama,makinenin enerji tüketimini yarıya indirir. Bu da
-            yılda saatlerce ışık açık bırakmaya eşdeğer enerji tasarrufu demek.</p>
         </div>
-      </div>
-      <div class="col" data-aos="fade-up">
-        <div class="features d-flex flex-column card-bg no-meat-day">
-          <div
-            class="feature-icon growingItem d-inline-flex align-items-center justify-content-center fs-2 mb-3 growingIcon">
-            <i class="bi bi-fork-knife"></i>
+        <div class="col" data-aos="fade-up">
+          <div class="features d-flex flex-column card-bg no-meat-day">
+            <div
+              class="feature-icon growingItem d-inline-flex align-items-center justify-content-center fs-2 mb-3 growingIcon"
+            >
+              <i class="bi bi-fork-knife"></i>
+            </div>
+            <h3 class="roboto-condensed-24px">Haftada 1 gün et tüketmemek</h3>
+            <p class="roboto-condensed-16px">
+              Hayvansal üretim, su ve karbon açısından çok maliyetlidir. Haftada
+              1 gün et yememek, yılda yaklaşık 100 kg karbon emisyonunu
+              azaltabilir. Bu, bir arabanın 400 km yol yapmasına denkgelen bir
+              etki sağlar.
+            </p>
           </div>
-          <h3 class="roboto-condensed-24px">Haftada 1 gün et tüketmemek</h3>
-          <p class="roboto-condensed-16px">Hayvansal üretim, su ve karbon açısından çok maliyetlidir. Haftada 1 gün et
-            yememek, yılda yaklaşık 100 kg karbon emisyonunu azaltabilir. Bu, bir arabanın 400 km yol yapmasına
-            denkgelen bir etki sağlar.</p>
         </div>
       </div>
     </div>
-  </div>
-  <!--Karbon Ayak İzi Testi-->
-  <div class="carbon-foot-step content p-5" id="test">
-    <div class="px-4 py-5 my-5 text-center">
-      <h2 class="display-5 pb-4 fw-bold text-light playwrite-de-grund">
-        Hepimiz yaşarken biraz iz bırakıyoruz.
+    <!--Karbon Ayak İzi Testi-->
+    <div class="carbon-foot-step content p-5" id="test">
+      <div class="px-4 py-5 my-5 text-center">
+        <h2 class="display-5 pb-4 fw-bold text-light playwrite-de-grund">
+          Hepimiz yaşarken biraz iz bırakıyoruz.
+        </h2>
+
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4 text-light fw-light roboto-condensed-16px">
+            Peki, senin karbon ve su ayak izin ne kadar büyük? Karbon ve su ayak
+            izini ölç, çevreye olan etkinin farkına var! Basit sorularla
+            hayatındaki karbon salımını ve su tüketimini keşfet, doğaya dost ve
+            sürdürülebilir adımlar atmaya başla.
+          </p>
+
+          <div
+            class="test-buttons d-flex flex-column flex-md-row justify-content-center align-items-center gap-4 mt-5"
+          >
+            <!-- Su İzi Testi -->
+            <div
+              class="test-button-wrapper w-100 d-flex justify-content-center"
+            >
+              <a
+                href="/test/su-test.html"
+                class="water-button test-button text-decoration-none position-relative"
+                onmouseover="playAnimation(this)"
+              >
+                Su İzi Testi
+                <dotlottie-player
+                  src="https://lottie.host/a57c1735-8faf-4e5c-b0a9-3041abd5a926/gDStccVSlt.lottie"
+                  class="button-animation"
+                  background="transparent"
+                  speed="1"
+                  style="width: 100px; height: 100px"
+                  autoplay="false"
+                  loop="false"
+                >
+                </dotlottie-player>
+              </a>
+            </div>
+            <!-- Karbon Ayak İzi Testi -->
+            <div
+              class="test-button-wrapper w-100 d-flex justify-content-center"
+            >
+              <a
+                href="/test/karbon-test.html"
+                class="wind-button test-button text-decoration-none position-relative"
+                onmouseover="playAnimation(this)"
+              >
+                Karbon Ayak İzi Testi
+                <dotlottie-player
+                  src="https://lottie.host/4f2a0bb6-17ff-4713-aba0-57ca06decda4/TLsR2CFUZU.lottie"
+                  class="button-animation"
+                  background="transparent"
+                  speed="1"
+                  style="width: 100px; height: 100px"
+                  autoplay="false"
+                  loop="false"
+                >
+                </dotlottie-player>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Veriler-->
+    <section id="veriler">
+      <div
+        id="carouselExampleAutoplaying"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="2000"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container py-4">
+              <div
+                class="row align-items-center justify-content-center flex-column flex-md-row text-center text-md-start"
+              >
+                <!-- Lottie / GIF -->
+                <div
+                  class="col-md-6 mb-3 mb-md-0 d-flex justify-content-center"
+                >
+                  <dotlottie-player
+                    src="https://lottie.host/04a5038d-d505-49cc-999b-241f77337cd4/A8W6SfrEtv.lottie"
+                    background="transparent"
+                    speed="1"
+                    style="width: 300px; height: 300px"
+                    loop
+                    autoplay
+                  >
+                  </dotlottie-player>
+                </div>
+                <!-- Text -->
+                <div class="col-md-6">
+                  <p class="carousel-text roboto-condensed-16px fs-5">
+                    Dünya çapında yapılan ankete göre su sektörüne yatırım yapan
+                    kurumların %96’sı, 2025’te yatırımlarını sürdürecek ya da
+                    artıracaklarını belirtti.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--2.-->
+          <div class="carousel-item">
+            <div class="container py-4">
+              <div
+                class="row align-items-center justify-content-center flex-column flex-md-row text-center text-md-start"
+              >
+                <!-- Lottie / GIF -->
+                <div
+                  class="col-md-6 mb-3 mb-md-0 d-flex justify-content-center"
+                >
+                  <dotlottie-player
+                    src="https://lottie.host/242a865c-2b8e-40ae-8f9a-775a2cccf254/wrvDmMmeWN.lottie"
+                    background="transparent"
+                    speed="1"
+                    style="width: 300px; height: 300px"
+                    autoplay
+                    loop
+                  ></dotlottie-player>
+                </div>
+
+                <!-- Text -->
+                <div class="col-md-6">
+                  <p class="carousel-text roboto-condensed-16px fs-5">
+                    Küresel ölçekte suya olumlu etki hedefleyen firmalar
+                    sayesinde “water positive” yaklaşımları 2050’ye kadar
+                    yaygınlaştırılmaya başlandı.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--3.-->
+          <div class="carousel-item">
+            <div class="container py-4">
+              <div
+                class="row align-items-center justify-content-center flex-column flex-md-row text-center text-md-start"
+              >
+                <!-- Lottie / GIF -->
+                <div
+                  class="col-md-6 mb-3 mb-md-0 d-flex justify-content-center"
+                >
+                  <dotlottie-player
+                    src="https://lottie.host/f8ebc42a-f6d5-4879-a359-8d242c0fa01d/ZeJFT6I6Bf.lottie"
+                    background="transparent"
+                    speed="1"
+                    style="width: 300px; height: 300px"
+                    loop
+                    autoplay
+                  ></dotlottie-player>
+                </div>
+
+                <!-- Text -->
+                <div class="col-md-6">
+                  <p class="carousel-text roboto-condensed-16px fs-5">
+                    Türkiye, Mart 2025 itibarıyla 21,6 GW’tan fazla güneş
+                    enerjisi kurulu gücüne ulaşarak yenilenebilir enerji
+                    hedefini öne çekti.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+          ></button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+          ></button>
+        </div>
+      </div>
+    </section>
+
+    <!--Çocuklara Özel-->
+    <div class="childrens-page" id="cocuklar">
+      <div class="p-5 text-center children-special-page">
+        <div class="container py-5">
+          <h1 class="text-light roboto-condensed">
+            Burası Sadece Çocuklara Özel!
+          </h1>
+          <p
+            class="col-lg-8 mx-auto lead text-light roboto-condensed-16px fs-5"
+          >
+            Sadece senin gibi meraklı ve eğlenceyi seven çocuklar için
+            hazırlandı.
+          </p>
+          <a
+            href="/cocuklar-özel/cocuk.html"
+            class="btn-child gap-2 btn d-inline-block text-center"
+            id="btn-child"
+            >Haydi Gel!</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!--Biz Kimiz?-->
+    <div class="container-fluid px-4 py-1" id="biz-kimiz">
+      <h2 class="pb-2 playwrite-de-grund text-light py-5 border-bottom">
+        Biz Kimiz?
       </h2>
 
-      <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4 text-light fw-light roboto-condensed-16px">
-          Peki, senin karbon ve su ayak izin ne kadar büyük?
-          Karbon ve su ayak izini ölç, çevreye olan etkinin farkına var!
-          Basit sorularla hayatındaki karbon salımını ve su tüketimini keşfet,
-          doğaya dost ve sürdürülebilir adımlar atmaya başla.
-        </p>
-
-        <div class="test-buttons d-flex flex-column flex-md-row justify-content-center align-items-center gap-4 mt-5">
-          <!-- Su İzi Testi -->
-          <div class="test-button-wrapper w-100 d-flex justify-content-center">
-            <a href="/test/su-test.html" class="water-button test-button text-decoration-none position-relative"
-              onmouseover="playAnimation(this)">
-              Su İzi Testi
-              <dotlottie-player src="https://lottie.host/a57c1735-8faf-4e5c-b0a9-3041abd5a926/gDStccVSlt.lottie"
-                class="button-animation" background="transparent" speed="1" style="width: 100px; height: 100px;"
-                autoplay="false" loop="false">
-              </dotlottie-player>
+      <div class="row row-cols-1 row-cols-lg-3 g-4 py-5">
+        <!-- KART 1 -->
+        <a href="/biz-kimiz/biz-kimiz.html" class="text-decoration-none">
+          <div class="col">
+            <div
+              class="card-who h-100 text-bg-dark shadow-lg rounded-4"
+              style="
+                background-image: url('/biz-kimiz/biz-kimiz-assets/zeynep\ \(2\).jpg');
+                background-size: cover;
+                background-position: center;
+              "
+            >
+              <div
+                class="d-flex flex-column justify-content-end h-100 p-4 text-white text-shadow-1"
+              >
+                <h3 class="mb-3 fw-bold roboto-condensed-24px about-card">
+                  Zeynep Karaatlı
+                </h3>
+                <div class="icons d-flex flex-row gap-2 about-card">
+                  <i class="bi bi-who-icon bi-github"></i>
+                  <i class="bi bi-who-icon bi-linkedin"></i>
+                  <i class="bi bi-who-icon bi-instagram"></i>
+                  <i class="bi bi-who-icon bi-twitter-x"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!-- KART 2 -->
+        <a href="/biz-kimiz/biz-kimiz.html" class="text-decoration-none">
+          <div class="col">
+            <div
+              class="card-who h-100 text-bg-dark shadow-lg rounded-4"
+              style="
+                background-image: url('/biz-kimiz/biz-kimiz-assets/kubra.jpg');
+                background-size: cover;
+                background-position: center;
+              "
+            >
+              <div
+                class="d-flex flex-column justify-content-end h-100 p-4 text-white text-shadow-1"
+              >
+                <h3 class="mb-3 fw-bold roboto-condensed-24px about-card">
+                  Kübra Kürekçi
+                </h3>
+                <div class="icons d-flex flex-row gap-2 about-card">
+                  <i class="bi bi-who-icon bi-github"></i>
+                  <i class="bi bi-who-icon bi-linkedin"></i>
+                  <i class="bi bi-who-icon bi-instagram"></i>
+                  <i class="bi bi-who-icon bi-twitter-x"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!-- KART 3 -->
+        <a href="/biz-kimiz/biz-kimiz.html" class="text-decoration-none">
+          <div class="col">
+            <div
+              class="card-who h-100 text-bg-dark shadow-lg rounded-4"
+              style="
+                background-image: url('/biz-kimiz/biz-kimiz-assets/teslime.jpg');
+                background-size: cover;
+                background-position: center;
+              "
+            >
+              <div
+                class="d-flex flex-column justify-content-end h-100 p-4 text-white text-shadow-1"
+              >
+                <h3 class="mb-3 fw-bold roboto-condensed-24px about-card">
+                  Teslime Dede
+                </h3>
+                <div class="icons d-flex flex-row gap-2 about-card">
+                  <i class="bi bi-who-icon bi-github"></i>
+                  <i class="bi bi-who-icon bi-linkedin"></i>
+                  <i class="bi bi-who-icon bi-instagram"></i>
+                  <i class="bi bi-who-icon bi-twitter-x"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!--Footer-->
+    <div class="container-fluid" id="footer">
+      <footer class="py-3 m-0">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a href="/Haberler/gundem.html" class="nav-link px-2">Gündem</a>
+          </li>
+          <li class="nav-item">
+            <a href="#cozumler" class="nav-link px-2">Çözüm Önerileri</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#test"
+              id="izTestDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              İz Testi
             </a>
-          </div>
-          <!-- Karbon Ayak İzi Testi -->
-          <div class="test-button-wrapper w-100 d-flex justify-content-center">
-            <a href="/test/karbon-test.html" class="wind-button test-button text-decoration-none position-relative"
-              onmouseover="playAnimation(this)">
-              Karbon Ayak İzi Testi
-              <dotlottie-player src="https://lottie.host/4f2a0bb6-17ff-4713-aba0-57ca06decda4/TLsR2CFUZU.lottie"
-                class="button-animation" background="transparent" speed="1" style="width: 100px; height: 100px;"
-                autoplay="false" loop="false">
-              </dotlottie-player>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!--Veriler-->
-  <section id="veriler">
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="container py-4">
-            <div
-              class="row align-items-center justify-content-center flex-column flex-md-row text-center text-md-start">
-              <!-- Lottie / GIF -->
-              <div class="col-md-6 mb-3 mb-md-0 d-flex justify-content-center">
-                <dotlottie-player src="https://lottie.host/04a5038d-d505-49cc-999b-241f77337cd4/A8W6SfrEtv.lottie"
-                  background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay>
-                </dotlottie-player>
-              </div>
-              <!-- Text -->
-              <div class="col-md-6">
-                <p class="carousel-text roboto-condensed-16px fs-5">
-                  Dünya çapında yapılan ankete göre
-                  su sektörüne yatırım yapan kurumların %96’sı, 2025’te yatırımlarını sürdürecek ya da artıracaklarını
-                  belirtti.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--2.-->
-        <div class="carousel-item ">
-          <div class="container py-4">
-            <div
-              class="row align-items-center justify-content-center flex-column flex-md-row text-center text-md-start">
-              <!-- Lottie / GIF -->
-              <div class="col-md-6 mb-3 mb-md-0 d-flex justify-content-center">
-                <dotlottie-player src="https://lottie.host/242a865c-2b8e-40ae-8f9a-775a2cccf254/wrvDmMmeWN.lottie"
-                  background="transparent" speed="1" style="width: 300px; height: 300px" autoplay
-                  loop></dotlottie-player>
-              </div>
-
-              <!-- Text -->
-              <div class="col-md-6">
-                <p class="carousel-text roboto-condensed-16px fs-5">
-                  Küresel ölçekte suya olumlu etki hedefleyen firmalar sayesinde “water positive” yaklaşımları 2050’ye
-                  kadar yaygınlaştırılmaya başlandı.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--3.-->
-        <div class="carousel-item ">
-          <div class="container py-4">
-            <div
-              class="row align-items-center justify-content-center flex-column flex-md-row text-center text-md-start">
-              <!-- Lottie / GIF -->
-              <div class="col-md-6 mb-3 mb-md-0 d-flex justify-content-center">
-                <dotlottie-player src="https://lottie.host/f8ebc42a-f6d5-4879-a359-8d242c0fa01d/ZeJFT6I6Bf.lottie"
-                  background="transparent" speed="1" style="width: 300px; height: 300px" loop
-                  autoplay></dotlottie-player>
-                </dotlottie-player>
-              </div>
-
-              <!-- Text -->
-              <div class="col-md-6">
-                <p class="carousel-text roboto-condensed-16px fs-5">
-                  Türkiye, Mart 2025 itibarıyla 21,6 GW’tan fazla güneş enerjisi kurulu gücüne ulaşarak yenilenebilir
-                  enerji hedefini öne çekti.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="prev">
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="next">
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!--Çocuklara Özel-->
-  <div class="childrens-page" id="cocuklar">
-    <div class="p-5 text-center children-special-page">
-      <div class="container py-5">
-        <h1 class="text-light roboto-condensed">Burası Sadece Çocuklara Özel!</h1>
-        <p class="col-lg-8 mx-auto lead text-light roboto-condensed-16px fs-5">Sadece senin gibi meraklı ve eğlenceyi
-          seven çocuklar için
-          hazırlandı.
+            <ul class="dropdown-menu" aria-labelledby="izTestDropdown">
+              <li>
+                <a class="dropdown-item nav-link" href="test/karbon-test.html"
+                  >Karbon Ayak İzi Testi</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item nav-link" href="test/su-test.html"
+                  >Su İzi Testi</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#veriler" class="nav-link px-2">Veriler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link child-special" href="/cocuklar-özel/cocuk.html"
+              >Çocuklara Özel</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="/biz-kimiz/biz-kimiz.html" class="nav-link px-2"
+              >Biz Kimiz?</a
+            >
+          </li>
+        </ul>
+        <p class="text-center roboto-condensed-16px text-light">
+          © 2025 <br />
+          W-Code 2.0 | Kodluyoruz & Gelecek Hayalim
         </p>
-       <a href="/cocuklar-özel/cocuk.html" class="btn-child gap-2 btn d-inline-block text-center" id="btn-child">Haydi Gel!</a>
-
-      </div>
+      </footer>
     </div>
-  </div>
+    <button id="scrollToTopBtn" title="Yukarı Çık">
+      <i class="bi bi-chevron-up"></i>
+    </button>
 
-  <!--Biz Kimiz?-->
-  <div class="container-fluid px-4 py-1" id="biz-kimiz">
-    <h2 class="pb-2 playwrite-de-grund text-light py-5 border-bottom">Biz Kimiz?</h2>
-
-    <div class="row row-cols-1 row-cols-lg-3 g-4 py-5">
-
-      <!-- KART 1 -->
-      <a href="/biz-kimiz/biz-kimiz.html" class="text-decoration-none">
-        <div class="col">
-          <div class="card-who h-100 text-bg-dark shadow-lg rounded-4"
-            style="background-image: url('/assets/freepik__a-cartoon-of-a-25yearold-caucasian-woman-with-shor__4907.jpeg'); background-size: cover; background-position: center;">
-            <div class="d-flex flex-column justify-content-end h-100 p-4 text-white text-shadow-1">
-              <h3 class="mb-3 fw-bold roboto-condensed-24px about-card">Zeynep Karaatlı</h3>
-              <div class="icons d-flex flex-row gap-2 about-card">
-                <i class="bi bi-who-icon bi-github"></i>
-                <i class="bi bi-who-icon bi-linkedin"></i>
-                <i class="bi bi-who-icon bi-instagram"></i>
-                <i class="bi bi-who-icon bi-twitter-x"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <!-- KART 2 -->
-      <a href="/biz-kimiz/biz-kimiz.html" class="text-decoration-none">
-        <div class="col">
-          <div class="card-who h-100 text-bg-dark shadow-lg rounded-4"
-            style="background-image: url('/assets/freepik__a-cartoon-of-a-25yearold-japanese-woman-coding-at-__4906.jpeg'); background-size: cover; background-position: center;">
-            <div class="d-flex flex-column justify-content-end h-100 p-4 text-white text-shadow-1">
-              <h3 class="mb-3 fw-bold roboto-condensed-24px about-card">Kübra Kürekçi</h3>
-              <div class="icons d-flex flex-row gap-2 about-card">
-                <i class="bi bi-who-icon bi-github"></i>
-                <i class="bi bi-who-icon bi-linkedin"></i>
-                <i class="bi bi-who-icon bi-instagram"></i>
-                <i class="bi bi-who-icon bi-twitter-x"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <!-- KART 3 -->
-      <a href="/biz-kimiz/biz-kimiz.html" class="text-decoration-none">
-        <div class="col">
-          <div class="card-who h-100 text-bg-dark shadow-lg rounded-4"
-            style="background-image: url('/assets/freepik__a-cartoon-of-a-25yearold-eastern-european-woman-co__4905.jpeg'); background-size: cover; background-position: center;">
-            <div class="d-flex flex-column justify-content-end h-100 p-4 text-white text-shadow-1">
-              <h3 class="mb-3 fw-bold roboto-condensed-24px about-card">Teslime Dede</h3>
-              <div class="icons d-flex flex-row gap-2 about-card">
-                <i class="bi bi-who-icon bi-github"></i>
-                <i class="bi bi-who-icon bi-linkedin"></i>
-                <i class="bi bi-who-icon bi-instagram"></i>
-                <i class="bi bi-who-icon bi-twitter-x"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-  <!--Footer-->
-  <div class="container-fluid" id="footer">
-    <footer class="py-3 m-0">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="/Haberler/gundem.html" class="nav-link px-2 ">Gündem</a></li>
-        <li class="nav-item"><a href="#cozumler" class="nav-link px-2 ">Çözüm Önerileri</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#test" id="izTestDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            İz Testi
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="izTestDropdown">
-            <li><a class="dropdown-item nav-link" href="test/karbon-test.html">Karbon Ayak İzi Testi</a></li>
-            <li><a class="dropdown-item nav-link" href="test/su-test.html">Su İzi Testi</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a href="#veriler" class="nav-link px-2">Veriler</a></li>
-        <li class="nav-item">
-          <a class="nav-link child-special" href="/cocuklar-özel/cocuk.html">Çocuklara Özel</a>
-        </li>
-        <li class="nav-item"><a href="/biz-kimiz/biz-kimiz.html" class="nav-link px-2">Biz Kimiz?</a></li>
-      </ul>
-      <p class="text-center roboto-condensed-16px text-light">© 2025 <br> W-Code 2.0 | Kodluyoruz & Gelecek Hayalim
-      </p>
-    </footer>
-  </div>
-  <button id="scrollToTopBtn" title="Yukarı Çık"><i class="bi bi-chevron-up"></i></button>
-
-  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-  <script src="https://kit.fontawesome.com/d1da082d12.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-    crossorigin="anonymous"></script>
-  <script src=" /script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-</body>
-
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/d1da082d12.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src=" /script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+  </body>
 </html>
